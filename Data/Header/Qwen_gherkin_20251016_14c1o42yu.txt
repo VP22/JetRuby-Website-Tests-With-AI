@@ -1,0 +1,193 @@
+Feature: Website Header Validation
+
+  Background:
+    Given I am on the homepage
+
+  @visibility
+  Scenario: Header element is present in the DOM
+    Then the <header> element should exist in the page source
+
+  @visibility
+  Scenario: Header is visible on page load
+    Then the main header should be visible
+
+  @logo
+  Scenario: Logo is present in the header
+    Then the logo image should be present
+
+  @logo
+  Scenario: Logo has appropriate alt text for accessibility
+    Then the logo should have non-empty alt attribute
+
+  @logo
+  Scenario: Logo is clickable and links to homepage
+    When I click the logo
+    Then I should be navigated to the homepage
+
+  @navigation
+  Scenario: All expected navigation items are present
+    Then the following navigation links should be present:
+      | Technologies |
+      | Services     |
+      | Solutions    |
+      | Industries   |
+      | Portfolio    |
+      | Blog         |
+      | News         |
+      | Company      |
+
+  @navigation
+  Scenario: Navigation links are visible on desktop viewport
+    Given the viewport width is 1280px
+    Then all primary navigation items should be visible
+
+  @navigation
+  Scenario: Each navigation link has a valid href
+    Then every navigation link should have a non-empty href attribute
+
+  @navigation
+  Scenario: Navigation links are keyboard-focusable
+    When I press Tab key repeatedly from page start
+    Then I should be able to focus each navigation link in order
+
+  @contact-button
+  Scenario: Contact button is present in the header
+    Then the "Contact" button should be present
+
+  @contact-button
+  Scenario: Contact button is styled as a call-to-action
+    Then the "Contact" button should have a distinct visual style (e.g., background color)
+
+  @contact-button
+  Scenario: Contact button is clickable
+    When I click the "Contact" button
+    Then I should be taken to the contact page or modal
+
+  @contact-button
+  Scenario: Contact button has appropriate ARIA label or role (if applicable)
+    Then the "Contact" button should have a valid role or aria-label
+
+  @mobile
+  Scenario: Mobile menu toggle is hidden on desktop
+    Given the viewport width is 1280px
+    Then the mobile menu toggle should not be visible
+
+  @mobile
+  Scenario: Mobile menu toggle is visible on mobile viewport
+    Given the viewport width is 375px
+    Then the mobile menu toggle should be visible
+
+  @mobile
+  Scenario: Mobile menu is hidden by default on mobile
+    Given the viewport width is 375px
+    Then the mobile navigation menu should be hidden
+
+  @mobile
+  Scenario: Clicking mobile toggle opens the menu
+    Given the viewport width is 375px
+    When I click the mobile menu toggle
+    Then the mobile navigation menu should be visible
+
+  @mobile
+  Scenario: Mobile menu contains all navigation items
+    Given the viewport width is 375px
+    When I open the mobile menu
+    Then the mobile menu should contain all 8 navigation items
+
+  @mobile
+  Scenario: Clicking a link in mobile menu closes the menu (if designed to)
+    Given the viewport width is 375px
+    And the mobile menu is open
+    When I click the "Services" link in mobile menu
+    Then the mobile menu should close
+
+  @accessibility
+  Scenario: Header has proper landmark role
+    Then the <header> element should have role="banner" or be a native <header>
+
+  @accessibility
+  Scenario: Navigation region is properly labeled
+    Then the main <nav> element should have an aria-label or aria-labelledby
+
+  @accessibility
+  Scenario: Mobile toggle has aria-expanded state
+    Given the viewport is mobile-sized
+    Then the mobile menu toggle should have aria-expanded="false" initially
+    When I open the mobile menu
+    Then the mobile menu toggle should have aria-expanded="true"
+
+  @performance
+  Scenario: Header loads within 500ms of page load
+    Then the header should be fully rendered within 500 milliseconds
+
+  @visual
+  Scenario: Header maintains consistent height across pages
+    When I navigate to "Services" page
+    Then the header height should match the homepage header height
+
+  @visual
+  Scenario: No layout shift occurs during header rendering
+    Then the header should not cause cumulative layout shift (CLS)
+
+  @security
+  Scenario: Header does not contain inline scripts or eval()
+    Then the header HTML should not include inline JavaScript or dangerous eval patterns
+
+  @seo
+  Scenario: Logo links to root with rel="home" or equivalent semantic practice
+    Then the logo link should point to "/" and support SEO best practices
+
+  @internationalization
+  Scenario: Header text supports UTF-8 characters (if multilingual)
+    Given the site language is set to French
+    Then navigation items should display correctly with accented characters
+
+  @hover-states
+  Scenario: Navigation links show visual feedback on hover (desktop)
+    Given the viewport is desktop-sized
+    When I hover over the "Portfolio" link
+    Then it should display a hover effect (e.g., color change, underline)
+
+  @focus-states
+  Scenario: All interactive elements show visible focus indicator
+    When I tab to the "Contact" button
+    Then it should display a clear focus ring or outline
+
+  @scrolling
+  Scenario: Header remains fixed or behaves as designed on scroll
+    When I scroll down 200 pixels
+    Then the header should maintain its expected scroll behavior (fixed/sticky/collapsible)
+
+  @error-resilience
+  Scenario: Header renders correctly even if one asset fails to load
+    Given the logo image fails to load
+    Then the header layout should not break
+
+  @cross-browser
+  Scenario: Header layout is consistent in Chrome, Firefox, and Safari
+    Then the header should render with consistent spacing and alignment across major browsers
+
+  @keyboard-navigation
+  Scenario: Entire header is navigable via keyboard only
+    When I use only Tab and Enter keys
+    Then I should be able to access all interactive header elements
+
+  @touch
+  Scenario: Header elements are tappable on touch devices
+    Given I am on a touch-enabled device or emulator
+    Then the "Contact" button should respond to tap gestures
+
+  @print
+  Scenario: Header appears appropriately in print preview
+    When I open print preview
+    Then the header should be visible and legible
+
+  @dark-mode
+  Scenario: Header adapts to system dark mode (if supported)
+    Given the OS is in dark mode
+    Then the header should use appropriate dark-mode colors
+
+  @analytics
+  Scenario: Clicks on header links trigger expected tracking events
+    When I click the "Blog" link
+    Then a tracking event should be sent (e.g., via dataLayer or analytics API)

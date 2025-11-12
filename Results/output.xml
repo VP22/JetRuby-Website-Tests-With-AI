@@ -1,0 +1,3032 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.14.0 on win32)" generated="2025-11-12T22:38:21.445834" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="D:\My docs\Projects\JetRuby.01\Tests">
+<suite id="s1-s1" name="Header" source="D:\My docs\Projects\JetRuby.01\Tests\Header.robot">
+<kw name="Open Browser To Homepage" owner="Common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:21.645660" level="INFO">Opening browser 'chrome' to base url 'https://jetruby.com/'.</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:21.645258" elapsed="2.027111"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-12T22:38:23.672653" elapsed="0.084542"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-11-12T22:38:23.757583" elapsed="0.002679"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:21.644549" elapsed="2.115910"/>
+</kw>
+<test id="s1-s1-t1" name="Header Element Is Present In The DOM" line="11">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:23.762506" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:23.762213" elapsed="0.363425"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:23.761609" elapsed="0.364227"/>
+</kw>
+<kw name="When the page source is checked" owner="HeaderKeywords">
+<kw name="Check if header element exists in DOM" owner="HeaderFunctions">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:24.156485" level="INFO">Current page contains element 'css:.elementor-element-a7a1c7e'.</msg>
+<arg>${HEADER_ELEMENT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-12T22:38:24.127177" elapsed="0.029447"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:24.126833" elapsed="0.029965"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:24.126370" elapsed="0.030525"/>
+</kw>
+<kw name="Then the &lt;header&gt; element should exist in the page source" owner="HeaderKeywords">
+<kw name="Check if header element exists in DOM" owner="HeaderFunctions">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:24.174566" level="INFO">Current page contains element 'css:.elementor-element-a7a1c7e'.</msg>
+<arg>${HEADER_ELEMENT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-12T22:38:24.158454" elapsed="0.016262"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:24.158034" elapsed="0.016832"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:24.157449" elapsed="0.017505"/>
+</kw>
+<tag>visibility</tag>
+<status status="PASS" start="2025-11-12T22:38:23.760602" elapsed="0.414947"/>
+</test>
+<test id="s1-s1-t2" name="Header Is Visible On Page Load" line="17">
+<kw name="Given the page is opened" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:24.181480" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:24.179589" elapsed="0.329373"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:24.178265" elapsed="0.330854"/>
+</kw>
+<kw name="When the page is checked for the header" owner="HeaderKeywords">
+<kw name="Look for header on page" owner="HeaderFunctions">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:24.519660" level="INFO">Current page contains element 'css:.elementor-element-a7a1c7e'.</msg>
+<arg>${HEADER_ELEMENT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-12T22:38:24.510685" elapsed="0.009165"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:24.510204" elapsed="0.010106"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:24.509584" elapsed="0.010853"/>
+</kw>
+<kw name="Then the main header should be visible" owner="HeaderKeywords">
+<kw name="Verify header visibility" owner="HeaderFunctions">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:24.553004" level="INFO">Element 'css:.elementor-element-a7a1c7e' is displayed.</msg>
+<arg>${HEADER_ELEMENT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:24.523897" elapsed="0.029316"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:24.523589" elapsed="0.029829"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:24.523157" elapsed="0.030460"/>
+</kw>
+<tag>visibility</tag>
+<status status="PASS" start="2025-11-12T22:38:24.176786" elapsed="0.377626"/>
+</test>
+<test id="s1-s1-t3" name="Logo Is Present In The Header" line="23">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:24.557887" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:24.557602" elapsed="0.343752"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:24.557052" elapsed="0.344476"/>
+</kw>
+<kw name="When the header content is checked" owner="HeaderKeywords">
+<kw name="Examine header content" owner="HeaderFunctions">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:24.911645" level="INFO">Current page contains element 'css:.elementor-element-a7a1c7e'.</msg>
+<arg>${HEADER_ELEMENT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-12T22:38:24.902855" elapsed="0.008942"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:24.902512" elapsed="0.009432"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:24.902050" elapsed="0.010002"/>
+</kw>
+<kw name="Then the logo image should be present" owner="HeaderKeywords">
+<kw name="Check if logo is present" owner="HeaderFunctions">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:24.935970" level="INFO">Current page contains element 'css:.elementor-icon'.</msg>
+<arg>${HEADER_LOGO}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-12T22:38:24.914354" elapsed="0.021818"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:24.913736" elapsed="0.022614"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:24.913002" elapsed="0.023432"/>
+</kw>
+<tag>logo</tag>
+<status status="PASS" start="2025-11-12T22:38:24.556295" elapsed="0.381133"/>
+</test>
+<test id="s1-s1-t4" name="Logo Has Appropriate Alt Text For Accessibility" line="29">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:24.940437" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:24.940157" elapsed="0.310115"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:24.939635" elapsed="0.310797"/>
+</kw>
+<kw name="When the logo element is examined" owner="HeaderKeywords">
+<kw name="Validate logo alt attribute" owner="HeaderFunctions">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:25.277250" level="INFO">${alt_text} = None</msg>
+<var>${alt_text}</var>
+<arg>${HEADER_LOGO}</arg>
+<arg>${ALT_ATTRIBUTE}</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:25.251969" elapsed="0.025404"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-11-12T22:38:25.278107" level="FAIL">Could not get length of 'None'.</msg>
+<arg>${alt_text}</arg>
+<arg>${EMPTY_ALT_ERROR}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="FAIL" start="2025-11-12T22:38:25.277653" elapsed="0.000981">Could not get length of 'None'.</status>
+</kw>
+<status status="FAIL" start="2025-11-12T22:38:25.251383" elapsed="0.027469">Could not get length of 'None'.</status>
+</kw>
+<status status="FAIL" start="2025-11-12T22:38:25.250958" elapsed="0.028035">Could not get length of 'None'.</status>
+</kw>
+<kw name="Then the logo should have non-empty alt attribute" owner="HeaderKeywords">
+<status status="NOT RUN" start="2025-11-12T22:38:25.279506" elapsed="0.000059"/>
+</kw>
+<tag>logo</tag>
+<status status="FAIL" start="2025-11-12T22:38:24.938626" elapsed="0.341331">Could not get length of 'None'.</status>
+</test>
+<test id="s1-s1-t5" name="Logo Is Clickable And Links To Homepage" line="35">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:25.284928" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:25.284717" elapsed="0.336132"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:25.284159" elapsed="0.336837"/>
+</kw>
+<kw name="When I click the logo" owner="HeaderKeywords">
+<kw name="Click on the logo image" owner="HeaderFunctions">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:25.622473" level="INFO">Clicking element 'css:.elementor-icon'.</msg>
+<arg>${HEADER_LOGO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:25.622176" elapsed="0.074668"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:25.621908" elapsed="0.075137"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:25.621503" elapsed="0.075640"/>
+</kw>
+<kw name="Then I should be navigated to the homepage" owner="HeaderKeywords">
+<kw name="Verify current page is homepage" owner="HeaderFunctions">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:25.717501" level="INFO">Current location is 'https://jetruby.com/'.</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:25.698437" elapsed="0.019229"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:25.698129" elapsed="0.019712"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:25.697696" elapsed="0.020257"/>
+</kw>
+<tag>logo</tag>
+<status status="PASS" start="2025-11-12T22:38:25.281650" elapsed="0.436681"/>
+</test>
+<test id="s1-s1-t6" name="All Expected Navigation Items Are Present" line="41">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:25.720490" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:25.720238" elapsed="0.497410"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:25.719694" elapsed="0.498199"/>
+</kw>
+<kw name="When the navigation section is checked" owner="HeaderKeywords">
+<kw name="Examine navigation section" owner="HeaderFunctions">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.236275" level="INFO">Current page contains element 'css:.header-nav'.</msg>
+<arg>${NAVIGATION_MENU}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.219927" elapsed="0.016474"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:26.219443" elapsed="0.017082"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:26.218868" elapsed="0.017732"/>
+</kw>
+<kw name="Then the following navigation links should be present" owner="HeaderKeywords">
+<kw name="Verify navigation links presence" owner="HeaderFunctions">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.277374" level="INFO">@{actual_links} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.485")&gt; | &lt;selenium.webd...</msg>
+<var>@{actual_links}</var>
+<arg>${NAVIGATION_LINKS}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.238514" elapsed="0.038944"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.278006" level="INFO">${actual_link_texts} = []</msg>
+<var>${actual_link_texts}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.277773" elapsed="0.000274"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.294597" level="INFO">${text} = Technologies</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.278621" elapsed="0.016038"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_link_texts}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.294897" elapsed="0.000234"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.485")&gt;</var>
+<status status="PASS" start="2025-11-12T22:38:26.278421" elapsed="0.016772"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.307302" level="INFO">${text} = Services</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.295510" elapsed="0.011870"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_link_texts}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.307658" elapsed="0.000296"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.486")&gt;</var>
+<status status="PASS" start="2025-11-12T22:38:26.295372" elapsed="0.012665"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.320166" level="INFO">${text} = Solutions</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.308391" elapsed="0.011839"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_link_texts}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.320472" elapsed="0.000380"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.487")&gt;</var>
+<status status="PASS" start="2025-11-12T22:38:26.308226" elapsed="0.012733"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.336336" level="INFO">${text} = Industries</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.321421" elapsed="0.015029"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_link_texts}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.336815" elapsed="0.000336"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.488")&gt;</var>
+<status status="PASS" start="2025-11-12T22:38:26.321210" elapsed="0.016033"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.347818" level="INFO">${text} = Portfolio</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.337754" elapsed="0.010146"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_link_texts}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.348161" elapsed="0.000286"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.489")&gt;</var>
+<status status="PASS" start="2025-11-12T22:38:26.337538" elapsed="0.010983"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.359836" level="INFO">${text} = Blog</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.348825" elapsed="0.011092"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_link_texts}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.360200" elapsed="0.000302"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.490")&gt;</var>
+<status status="PASS" start="2025-11-12T22:38:26.348685" elapsed="0.011902"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.369459" level="INFO">${text} = News</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.360933" elapsed="0.008602"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_link_texts}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.369767" elapsed="0.000232"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.491")&gt;</var>
+<status status="PASS" start="2025-11-12T22:38:26.360777" elapsed="0.009288"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.382848" level="INFO">${text} = Company</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.370476" elapsed="0.012434"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actual_link_texts}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.383183" elapsed="0.000330"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.492")&gt;</var>
+<status status="PASS" start="2025-11-12T22:38:26.370288" elapsed="0.013322"/>
+</iter>
+<var>${link}</var>
+<value>@{actual_links}</value>
+<status status="PASS" start="2025-11-12T22:38:26.278157" elapsed="0.105556"/>
+</for>
+<for flavor="IN">
+<iter>
+<kw name="List Should Contain Value" owner="Collections">
+<arg>${actual_link_texts}</arg>
+<arg>${expected_link}</arg>
+<doc>Fails if the ``value`` is not found from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.384397" elapsed="0.000358"/>
+</kw>
+<var name="${expected_link}">Technologies</var>
+<status status="PASS" start="2025-11-12T22:38:26.384190" elapsed="0.000662"/>
+</iter>
+<iter>
+<kw name="List Should Contain Value" owner="Collections">
+<arg>${actual_link_texts}</arg>
+<arg>${expected_link}</arg>
+<doc>Fails if the ``value`` is not found from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.385204" elapsed="0.000315"/>
+</kw>
+<var name="${expected_link}">Services</var>
+<status status="PASS" start="2025-11-12T22:38:26.385029" elapsed="0.000578"/>
+</iter>
+<iter>
+<kw name="List Should Contain Value" owner="Collections">
+<arg>${actual_link_texts}</arg>
+<arg>${expected_link}</arg>
+<doc>Fails if the ``value`` is not found from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.385954" elapsed="0.001483"/>
+</kw>
+<var name="${expected_link}">Solutions</var>
+<status status="PASS" start="2025-11-12T22:38:26.385770" elapsed="0.001813"/>
+</iter>
+<iter>
+<kw name="List Should Contain Value" owner="Collections">
+<arg>${actual_link_texts}</arg>
+<arg>${expected_link}</arg>
+<doc>Fails if the ``value`` is not found from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.388110" elapsed="0.000257"/>
+</kw>
+<var name="${expected_link}">Industries</var>
+<status status="PASS" start="2025-11-12T22:38:26.387863" elapsed="0.000577"/>
+</iter>
+<iter>
+<kw name="List Should Contain Value" owner="Collections">
+<arg>${actual_link_texts}</arg>
+<arg>${expected_link}</arg>
+<doc>Fails if the ``value`` is not found from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.388698" elapsed="0.000298"/>
+</kw>
+<var name="${expected_link}">Portfolio</var>
+<status status="PASS" start="2025-11-12T22:38:26.388572" elapsed="0.000512"/>
+</iter>
+<iter>
+<kw name="List Should Contain Value" owner="Collections">
+<arg>${actual_link_texts}</arg>
+<arg>${expected_link}</arg>
+<doc>Fails if the ``value`` is not found from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.389411" elapsed="0.000317"/>
+</kw>
+<var name="${expected_link}">Blog</var>
+<status status="PASS" start="2025-11-12T22:38:26.389250" elapsed="0.000566"/>
+</iter>
+<iter>
+<kw name="List Should Contain Value" owner="Collections">
+<arg>${actual_link_texts}</arg>
+<arg>${expected_link}</arg>
+<doc>Fails if the ``value`` is not found from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.390154" elapsed="0.000299"/>
+</kw>
+<var name="${expected_link}">News</var>
+<status status="PASS" start="2025-11-12T22:38:26.389982" elapsed="0.000558"/>
+</iter>
+<iter>
+<kw name="List Should Contain Value" owner="Collections">
+<arg>${actual_link_texts}</arg>
+<arg>${expected_link}</arg>
+<doc>Fails if the ``value`` is not found from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.390853" elapsed="0.000279"/>
+</kw>
+<var name="${expected_link}">Company</var>
+<status status="PASS" start="2025-11-12T22:38:26.390698" elapsed="0.000518"/>
+</iter>
+<var>${expected_link}</var>
+<value>@{NAVIGATION_ITEMS}</value>
+<status status="PASS" start="2025-11-12T22:38:26.383880" elapsed="0.007415"/>
+</for>
+<status status="PASS" start="2025-11-12T22:38:26.237763" elapsed="0.153679"/>
+</kw>
+<arg>Technologies</arg>
+<arg>Services</arg>
+<arg>Solutions</arg>
+<arg>Industries</arg>
+<arg>Portfolio</arg>
+<arg>Blog</arg>
+<arg>News</arg>
+<arg>Company</arg>
+<status status="PASS" start="2025-11-12T22:38:26.237110" elapsed="0.154428"/>
+</kw>
+<tag>navigation</tag>
+<status status="PASS" start="2025-11-12T22:38:25.719014" elapsed="0.673003"/>
+</test>
+<test id="s1-s1-t7" name="Navigation Links Are Visible On Desktop Viewport" line="55">
+<kw name="Given the viewport width is" owner="HeaderKeywords">
+<kw name="Set browser viewport width" owner="HeaderFunctions">
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>${width}</arg>
+<arg>800</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.394860" elapsed="0.079435"/>
+</kw>
+<arg>${width}</arg>
+<status status="PASS" start="2025-11-12T22:38:26.394316" elapsed="0.080280"/>
+</kw>
+<arg>${DESKTOP_WIDTH}</arg>
+<status status="PASS" start="2025-11-12T22:38:26.393490" elapsed="0.081308"/>
+</kw>
+<kw name="When the navigation items are displayed" owner="HeaderKeywords">
+<kw name="Verify navigation items visibility" owner="HeaderFunctions">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.546432" level="INFO">@{links} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.485")&gt; | &lt;selenium.webd...</msg>
+<var>@{links}</var>
+<arg>${NAVIGATION_LINKS}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.476504" elapsed="0.070048"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.547059" level="INFO">Length is 8.</msg>
+<msg time="2025-11-12T22:38:26.547169" level="INFO">${count} = 8</msg>
+<var>${count}</var>
+<arg>${links}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.546827" elapsed="0.000378"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.547605" level="INFO">Found 8 navigation items</msg>
+<arg>Found ${count} navigation items</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.547370" elapsed="0.000292"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.548072" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${count}</arg>
+<arg>8</arg>
+<arg>Expected 8 navigation items but found ${count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.547820" elapsed="0.000350"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:26.548997" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.485")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.548646" elapsed="0.000403"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.559962" level="INFO">${text} = Technologies</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.549225" elapsed="0.010798"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.560548" level="INFO">Checking visibility of navigation item "Technologies" (index 0)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.560293" elapsed="0.000316"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.571429" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.485")&gt;' is displayed.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.560984" elapsed="0.010634"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.560791" elapsed="0.010963"/>
+</kw>
+<var name="${index}">0</var>
+<status status="PASS" start="2025-11-12T22:38:26.548501" elapsed="0.023328"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:26.572710" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.486")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.572355" elapsed="0.000420"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.583883" level="INFO">${text} = Services</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.573006" elapsed="0.010983"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.584783" level="INFO">Checking visibility of navigation item "Services" (index 1)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.584365" elapsed="0.000832"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.599673" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.486")&gt;' is displayed.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.586489" elapsed="0.013273"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.585874" elapsed="0.013956"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2025-11-12T22:38:26.572090" elapsed="0.027770"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:26.600257" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.487")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.600087" elapsed="0.000192"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.610311" level="INFO">${text} = Solutions</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.600384" elapsed="0.009993"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.610938" level="INFO">Checking visibility of navigation item "Solutions" (index 2)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.610649" elapsed="0.000362"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.618127" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.487")&gt;' is displayed.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.611387" elapsed="0.006905"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.611187" elapsed="0.007216"/>
+</kw>
+<var name="${index}">2</var>
+<status status="PASS" start="2025-11-12T22:38:26.599977" elapsed="0.018483"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:26.619145" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.488")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.618862" elapsed="0.000321"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.628041" level="INFO">${text} = Industries</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.619352" elapsed="0.008767"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.628644" level="INFO">Checking visibility of navigation item "Industries" (index 3)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.628383" elapsed="0.000342"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.635256" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.488")&gt;' is displayed.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.629128" elapsed="0.006275"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.628913" elapsed="0.006623"/>
+</kw>
+<var name="${index}">3</var>
+<status status="PASS" start="2025-11-12T22:38:26.618671" elapsed="0.016933"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:26.636376" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.489")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.636045" elapsed="0.000376"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.644561" level="INFO">${text} = Portfolio</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.636623" elapsed="0.007992"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.644996" level="INFO">Checking visibility of navigation item "Portfolio" (index 4)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.644807" elapsed="0.000232"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.652423" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.489")&gt;' is displayed.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.645385" elapsed="0.007223"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.645160" elapsed="0.007614"/>
+</kw>
+<var name="${index}">4</var>
+<status status="PASS" start="2025-11-12T22:38:26.635834" elapsed="0.017033"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:26.653699" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.490")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.653328" elapsed="0.000447"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.661356" level="INFO">${text} = Blog</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.654029" elapsed="0.007398"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.662042" level="INFO">Checking visibility of navigation item "Blog" (index 5)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.661741" elapsed="0.000377"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.668744" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.490")&gt;' is displayed.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.662637" elapsed="0.006243"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.662330" elapsed="0.006688"/>
+</kw>
+<var name="${index}">5</var>
+<status status="PASS" start="2025-11-12T22:38:26.653102" elapsed="0.016002"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:26.669813" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.491")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.669509" elapsed="0.000344"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.677092" level="INFO">${text} = News</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.670068" elapsed="0.007087"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.677626" level="INFO">Checking visibility of navigation item "News" (index 6)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.677387" elapsed="0.000298"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.685319" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.491")&gt;' is displayed.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.678043" elapsed="0.007419"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.677871" elapsed="0.007718"/>
+</kw>
+<var name="${index}">6</var>
+<status status="PASS" start="2025-11-12T22:38:26.669324" elapsed="0.016325"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:26.686400" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.492")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.686066" elapsed="0.000383"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.695597" level="INFO">${text} = Company</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.686646" elapsed="0.009042"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.696273" level="INFO">Checking visibility of navigation item "Company" (index 7)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.695971" elapsed="0.000373"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.701889" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.492")&gt;' is displayed.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.696769" elapsed="0.005205"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.696550" elapsed="0.005491"/>
+</kw>
+<var name="${index}">7</var>
+<status status="PASS" start="2025-11-12T22:38:26.685867" elapsed="0.016203"/>
+</iter>
+<var>${index}</var>
+<value>${count}</value>
+<status status="PASS" start="2025-11-12T22:38:26.548272" elapsed="0.153835"/>
+</for>
+<status status="PASS" start="2025-11-12T22:38:26.476248" elapsed="0.225924"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:26.475450" elapsed="0.226760"/>
+</kw>
+<kw name="Then all primary navigation items should be visible" owner="HeaderKeywords">
+<kw name="Verify navigation items visibility" owner="HeaderFunctions">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.708741" level="INFO">@{links} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.485")&gt; | &lt;selenium.webd...</msg>
+<var>@{links}</var>
+<arg>${NAVIGATION_LINKS}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.702956" elapsed="0.005825"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.709047" level="INFO">Length is 8.</msg>
+<msg time="2025-11-12T22:38:26.709096" level="INFO">${count} = 8</msg>
+<var>${count}</var>
+<arg>${links}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.708933" elapsed="0.000178"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.709280" level="INFO">Found 8 navigation items</msg>
+<arg>Found ${count} navigation items</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.709196" elapsed="0.000111"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.709514" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${count}</arg>
+<arg>8</arg>
+<arg>Expected 8 navigation items but found ${count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.709385" elapsed="0.000172"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:26.709922" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.485")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.709807" elapsed="0.000133"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.716929" level="INFO">${text} = Technologies</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.710015" elapsed="0.006955"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.717271" level="INFO">Checking visibility of navigation item "Technologies" (index 0)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.717120" elapsed="0.000184"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.722229" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.485")&gt;' is displayed.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.717514" elapsed="0.004864"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.717404" elapsed="0.005106"/>
+</kw>
+<var name="${index}">0</var>
+<status status="PASS" start="2025-11-12T22:38:26.709735" elapsed="0.012852"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:26.723314" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.486")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.723007" elapsed="0.000339"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.730221" level="INFO">${text} = Services</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.723452" elapsed="0.006840"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.730912" level="INFO">Checking visibility of navigation item "Services" (index 1)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.730628" elapsed="0.000350"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.737067" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.486")&gt;' is displayed.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.731363" elapsed="0.005826"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.731151" elapsed="0.006163"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2025-11-12T22:38:26.722821" elapsed="0.014568"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:26.738084" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.487")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.737776" elapsed="0.000349"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.744994" level="INFO">${text} = Solutions</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.738319" elapsed="0.006713"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.745313" level="INFO">Checking visibility of navigation item "Solutions" (index 2)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.745175" elapsed="0.000169"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.750894" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.487")&gt;' is displayed.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.745528" elapsed="0.005484"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.745431" elapsed="0.005704"/>
+</kw>
+<var name="${index}">2</var>
+<status status="PASS" start="2025-11-12T22:38:26.737595" elapsed="0.013613"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:26.751884" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.488")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.751588" elapsed="0.000335"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.759145" level="INFO">${text} = Industries</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.752111" elapsed="0.007071"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.759465" level="INFO">Checking visibility of navigation item "Industries" (index 3)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.759323" elapsed="0.000178"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.765137" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.488")&gt;' is displayed.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.759691" elapsed="0.005577"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.759589" elapsed="0.005790"/>
+</kw>
+<var name="${index}">3</var>
+<status status="PASS" start="2025-11-12T22:38:26.751412" elapsed="0.014043"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:26.766147" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.489")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.765834" elapsed="0.000365"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.772485" level="INFO">${text} = Portfolio</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.766389" elapsed="0.006136"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.772806" level="INFO">Checking visibility of navigation item "Portfolio" (index 4)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.772664" elapsed="0.000175"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.777734" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.489")&gt;' is displayed.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.773051" elapsed="0.004760"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.772939" elapsed="0.004933"/>
+</kw>
+<var name="${index}">4</var>
+<status status="PASS" start="2025-11-12T22:38:26.765657" elapsed="0.012243"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:26.778287" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.490")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.778124" elapsed="0.000186"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.807441" level="INFO">${text} = Blog</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.778435" elapsed="0.029083"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.808043" level="INFO">Checking visibility of navigation item "Blog" (index 5)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.807765" elapsed="0.000350"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.817814" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.490")&gt;' is displayed.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.808489" elapsed="0.009478"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.808287" elapsed="0.009746"/>
+</kw>
+<var name="${index}">5</var>
+<status status="PASS" start="2025-11-12T22:38:26.778012" elapsed="0.040051"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:26.818428" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.491")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.818281" elapsed="0.000169"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.824469" level="INFO">${text} = News</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.818538" elapsed="0.005971"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.824796" level="INFO">Checking visibility of navigation item "News" (index 6)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.824652" elapsed="0.000178"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.830133" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.491")&gt;' is displayed.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.825034" elapsed="0.005225"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.824923" elapsed="0.005450"/>
+</kw>
+<var name="${index}">6</var>
+<status status="PASS" start="2025-11-12T22:38:26.818177" elapsed="0.012273"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:26.831129" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.492")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.830829" elapsed="0.000341"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.837317" level="INFO">${text} = Company</msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.831357" elapsed="0.005998"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:26.837625" level="INFO">Checking visibility of navigation item "Company" (index 7)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.837491" elapsed="0.000166"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.842239" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.9568A823BD8C5EB4DD647836B37C5BEE.e.492")&gt;' is displayed.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.837849" elapsed="0.004514"/>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.837745" elapsed="0.004745"/>
+</kw>
+<var name="${index}">7</var>
+<status status="PASS" start="2025-11-12T22:38:26.830654" elapsed="0.011899"/>
+</iter>
+<var>${index}</var>
+<value>${count}</value>
+<status status="PASS" start="2025-11-12T22:38:26.709610" elapsed="0.133029"/>
+</for>
+<status status="PASS" start="2025-11-12T22:38:26.702804" elapsed="0.139960"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:26.702552" elapsed="0.140291"/>
+</kw>
+<tag>navigation</tag>
+<status status="PASS" start="2025-11-12T22:38:26.392817" elapsed="0.450312"/>
+</test>
+<test id="s1-s1-t8" name="Mobile Menu Toggle Is Hidden On Desktop" line="61">
+<kw name="Given the viewport width is" owner="HeaderKeywords">
+<kw name="Set browser viewport width" owner="HeaderFunctions">
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>${width}</arg>
+<arg>800</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.844308" elapsed="0.002393"/>
+</kw>
+<arg>${width}</arg>
+<status status="PASS" start="2025-11-12T22:38:26.844133" elapsed="0.002641"/>
+</kw>
+<arg>${DESKTOP_WIDTH}</arg>
+<status status="PASS" start="2025-11-12T22:38:26.843908" elapsed="0.002902"/>
+</kw>
+<kw name="When the header is checked for mobile menu" owner="HeaderKeywords">
+<kw name="Look for mobile menu toggle" owner="HeaderFunctions">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.854507" level="INFO">Current page contains element 'css:.header-burger-icon'.</msg>
+<arg>${MOBILE_MENU_TOGGLE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.847360" elapsed="0.007229"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:26.847220" elapsed="0.007445"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:26.847040" elapsed="0.007660"/>
+</kw>
+<kw name="Then the mobile menu toggle should not be visible" owner="HeaderKeywords">
+<kw name="Verify mobile menu toggle invisibility" owner="HeaderFunctions">
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.866408" level="INFO">Element 'css:.header-burger-icon' exists but is not displayed.</msg>
+<arg>${MOBILE_MENU_TOGGLE}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.855335" elapsed="0.011245"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:26.855177" elapsed="0.011617"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:26.854971" elapsed="0.011868"/>
+</kw>
+<tag>mobile</tag>
+<status status="PASS" start="2025-11-12T22:38:26.843564" elapsed="0.023520"/>
+</test>
+<test id="s1-s1-t9" name="Each Navigation Link Has A Valid Href" line="67">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:26.868145" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:26.868035" elapsed="0.309009"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:26.867829" elapsed="0.309307"/>
+</kw>
+<kw name="When the navigation links are examined" owner="HeaderKeywords">
+<kw name="Inspect navigation links" owner="HeaderFunctions">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:27.184327" level="INFO">Current page contains element 'css:.elementor-section--handles-inside .header-menu__item'.</msg>
+<arg>${NAVIGATION_LINKS}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-12T22:38:27.177913" elapsed="0.006493"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:27.177764" elapsed="0.006715"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:27.177548" elapsed="0.006965"/>
+</kw>
+<kw name="Then every navigation link should have a non-empty href attribute" owner="HeaderKeywords">
+<kw name="Validate navigation link href attributes" owner="HeaderFunctions">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:27.195044" level="INFO">@{links} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.58C2DB0830A38C9CD95F14CF9B5C546F.e.597")&gt; | &lt;selenium.webd...</msg>
+<var>@{links}</var>
+<arg>${NAVIGATION_HREF_LINKS}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:27.185362" elapsed="0.009749"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:27.202177" level="INFO">${href} = https://jetruby.com/portfolio/</msg>
+<var>${href}</var>
+<arg>${link}</arg>
+<arg>${HREF_ATTRIBUTE}</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:27.195649" elapsed="0.006565"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-11-12T22:38:27.202500" level="INFO">Length is 30.</msg>
+<arg>${href}</arg>
+<arg>Navigation link should have a non-empty href attribute</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-11-12T22:38:27.202354" elapsed="0.000179"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.58C2DB0830A38C9CD95F14CF9B5C546F.e.597")&gt;</var>
+<status status="PASS" start="2025-11-12T22:38:27.195424" elapsed="0.007143"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:27.206783" level="INFO">${href} = https://jetruby.com/blog/</msg>
+<var>${href}</var>
+<arg>${link}</arg>
+<arg>${HREF_ATTRIBUTE}</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:27.202734" elapsed="0.004094"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-11-12T22:38:27.207330" level="INFO">Length is 25.</msg>
+<arg>${href}</arg>
+<arg>Navigation link should have a non-empty href attribute</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-11-12T22:38:27.207000" elapsed="0.000508"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.58C2DB0830A38C9CD95F14CF9B5C546F.e.598")&gt;</var>
+<status status="PASS" start="2025-11-12T22:38:27.202654" elapsed="0.004966"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:27.213414" level="INFO">${href} = https://jetruby.com/blog/news/</msg>
+<var>${href}</var>
+<arg>${link}</arg>
+<arg>${HREF_ATTRIBUTE}</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:27.208010" elapsed="0.005540"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-11-12T22:38:27.214500" level="INFO">Length is 30.</msg>
+<arg>${href}</arg>
+<arg>Navigation link should have a non-empty href attribute</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-11-12T22:38:27.214002" elapsed="0.000701"/>
+</kw>
+<var name="${link}">&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.58C2DB0830A38C9CD95F14CF9B5C546F.e.599")&gt;</var>
+<status status="PASS" start="2025-11-12T22:38:27.207831" elapsed="0.007039"/>
+</iter>
+<var>${link}</var>
+<value>@{links}</value>
+<status status="PASS" start="2025-11-12T22:38:27.195241" elapsed="0.019750"/>
+</for>
+<status status="PASS" start="2025-11-12T22:38:27.185014" elapsed="0.030178"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:27.184782" elapsed="0.030492"/>
+</kw>
+<tag>navigation</tag>
+<status status="PASS" start="2025-11-12T22:38:26.867499" elapsed="0.348013"/>
+</test>
+<test id="s1-s1-t10" name="Navigation Links Are Keyboard-focusable" line="73">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:27.216905" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:27.216731" elapsed="0.324518"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:27.216394" elapsed="0.325018"/>
+</kw>
+<kw name="When I press Tab key repeatedly from page start" owner="HeaderKeywords">
+<kw name="Simulate tab key navigation" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:27.542325" level="INFO">Simulating tab key navigation</msg>
+<arg>Simulating tab key navigation</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:27.542247" elapsed="0.000112"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:27.542094" elapsed="0.000309"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:27.541880" elapsed="0.000553"/>
+</kw>
+<kw name="Then I should be able to focus each navigation link in order" owner="HeaderKeywords">
+<kw name="Verify navigation link focusability" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:27.543533" level="INFO">Verifying navigation link focusability</msg>
+<arg>Verifying navigation link focusability</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:27.543406" elapsed="0.000188"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:27.543152" elapsed="0.000521"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:27.542815" elapsed="0.000920"/>
+</kw>
+<tag>navigation</tag>
+<status status="PASS" start="2025-11-12T22:38:27.215923" elapsed="0.328156"/>
+</test>
+<test id="s1-s1-t11" name="Contact Button Is Present In The Header" line="79">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:27.545749" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:27.545583" elapsed="0.330972"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:27.545251" elapsed="0.331438"/>
+</kw>
+<kw name="When the header is checked for contact button" owner="HeaderKeywords">
+<kw name="Look for contact button in header" owner="HeaderFunctions">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:27.885278" level="INFO">Current page contains element 'css:.elementor-button'.</msg>
+<arg>${CONTACT_BUTTON}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-12T22:38:27.877410" elapsed="0.008000"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:27.877258" elapsed="0.008281"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:27.877041" elapsed="0.008572"/>
+</kw>
+<kw name="Then the &quot;Contact&quot; button should be present" owner="HeaderKeywords">
+<kw name="Check if contact button is present" owner="HeaderFunctions">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:27.890985" level="INFO">Current page contains element 'css:.elementor-button'.</msg>
+<arg>${CONTACT_BUTTON}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-12T22:38:27.886764" elapsed="0.004290"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:27.886387" elapsed="0.004746"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:27.886042" elapsed="0.005125"/>
+</kw>
+<tag>contact-button</tag>
+<tag>Current</tag>
+<status status="PASS" start="2025-11-12T22:38:27.544682" elapsed="0.346672"/>
+</test>
+<test id="s1-s1-t12" name="Contact Button Is Styled As A Call-to-action" line="85">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:27.892465" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:27.892333" elapsed="0.324182"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:27.892107" elapsed="0.324501"/>
+</kw>
+<kw name="When the contact button is examined" owner="HeaderKeywords">
+<kw name="Inspect contact button properties" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:28.217557" level="INFO">Inspecting contact button properties</msg>
+<arg>Inspecting contact button properties</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:28.217484" elapsed="0.000115"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:28.217339" elapsed="0.000309"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:28.217092" elapsed="0.000584"/>
+</kw>
+<kw name="Then the &quot;Contact&quot; button should have a distinct visual style (e.g., background color)" owner="HeaderKeywords">
+<kw name="Validate contact button styling" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:28.218347" level="INFO">Validating contact button styling</msg>
+<arg>Validating contact button styling</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:28.218267" elapsed="0.000116"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:28.218132" elapsed="0.000292"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:28.217963" elapsed="0.000488"/>
+</kw>
+<tag>contact-button</tag>
+<status status="PASS" start="2025-11-12T22:38:27.891759" elapsed="0.326929"/>
+</test>
+<test id="s1-s1-t13" name="Contact Button Is Clickable" line="91">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:28.219763" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:28.219610" elapsed="0.332228"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:28.219462" elapsed="0.332521"/>
+</kw>
+<kw name="When I click the &quot;Contact&quot; button" owner="HeaderKeywords">
+<kw name="Click on contact button" owner="HeaderFunctions">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:28.552961" level="INFO">Clicking element 'css:.elementor-button'.</msg>
+<arg>${CONTACT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:28.552801" elapsed="0.079970"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:28.552638" elapsed="0.080231"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:28.552417" elapsed="0.080491"/>
+</kw>
+<kw name="Then I should be taken to the contact page or modal" owner="HeaderKeywords">
+<kw name="Verify navigation to contact page" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:28.635770" level="INFO">Verifying navigation to contact page</msg>
+<arg>Verifying navigation to contact page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:28.635547" elapsed="0.000339"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:28.635003" elapsed="0.001064"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:28.633689" elapsed="0.002499"/>
+</kw>
+<tag>contact-button</tag>
+<status status="PASS" start="2025-11-12T22:38:28.219196" elapsed="0.417561"/>
+</test>
+<test id="s1-s1-t14" name="Contact Button Has Appropriate ARIA Label Or Role" line="97">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:28.640996" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:28.640540" elapsed="0.367132"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:28.639693" elapsed="0.368107"/>
+</kw>
+<kw name="When the contact button attributes are checked" owner="HeaderKeywords">
+<kw name="Examine contact button attributes" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:29.009647" level="INFO">Examining contact button attributes</msg>
+<arg>Examining contact button attributes</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:29.009509" elapsed="0.000225"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:29.009160" elapsed="0.000679"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:29.008684" elapsed="0.001270"/>
+</kw>
+<kw name="Then the &quot;Contact&quot; button should have a valid role or aria-label" owner="HeaderKeywords">
+<kw name="Validate contact button accessibility" owner="HeaderFunctions">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<arg>${CONTACT_BUTTON}</arg>
+<arg>${ROLE_ATTRIBUTE}</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:29.011368" elapsed="0.042674"/>
+</kw>
+<msg time="2025-11-12T22:38:29.054175" level="INFO">${role} = True</msg>
+<var>${role}</var>
+<arg>Get Element Attribute</arg>
+<arg>${CONTACT_BUTTON}</arg>
+<arg>${ROLE_ATTRIBUTE}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-12T22:38:29.011093" elapsed="0.043108"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<arg>${CONTACT_BUTTON}</arg>
+<arg>${ARIA_LABEL}</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:29.054513" elapsed="0.015883"/>
+</kw>
+<msg time="2025-11-12T22:38:29.070695" level="INFO">${aria_label} = True</msg>
+<var>${aria_label}</var>
+<arg>Get Element Attribute</arg>
+<arg>${CONTACT_BUTTON}</arg>
+<arg>${ARIA_LABEL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-12T22:38:29.054352" elapsed="0.016450"/>
+</kw>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2025-11-12T22:38:29.071139" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<arg>${role} or ${aria_label}</arg>
+<arg>Fail</arg>
+<arg>Contact button should have a valid role or aria-label</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2025-11-12T22:38:29.071076" elapsed="0.000948"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:29.010789" elapsed="0.061390"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:29.010427" elapsed="0.061838"/>
+</kw>
+<tag>contact-button</tag>
+<status status="PASS" start="2025-11-12T22:38:28.638373" elapsed="0.434192"/>
+</test>
+<test id="s1-s1-t15" name="Mobile Menu Toggle Is Visible On Mobile Viewport" line="103">
+<kw name="Given the viewport width is set to ${MOBILE_WIDTH}">
+<msg time="2025-11-12T22:38:29.077144" level="FAIL">No keyword with name 'Given the viewport width is set to ${MOBILE_WIDTH}' found.</msg>
+<status status="FAIL" start="2025-11-12T22:38:29.077039" elapsed="0.000176">No keyword with name 'Given the viewport width is set to ${MOBILE_WIDTH}' found.</status>
+</kw>
+<kw name="When the header is checked for mobile menu" owner="HeaderKeywords">
+<status status="NOT RUN" start="2025-11-12T22:38:29.077688" elapsed="0.000061"/>
+</kw>
+<kw name="Then the mobile menu toggle should be visible" owner="HeaderKeywords">
+<status status="NOT RUN" start="2025-11-12T22:38:29.078186" elapsed="0.000050"/>
+</kw>
+<tag>mobile</tag>
+<status status="FAIL" start="2025-11-12T22:38:29.073336" elapsed="0.005299">No keyword with name 'Given the viewport width is set to ${MOBILE_WIDTH}' found.</status>
+</test>
+<test id="s1-s1-t16" name="Mobile Menu Is Hidden By Default On Mobile" line="109">
+<kw name="Given the viewport width is set to ${MOBILE_WIDTH}">
+<msg time="2025-11-12T22:38:29.083416" level="FAIL">No keyword with name 'Given the viewport width is set to ${MOBILE_WIDTH}' found.</msg>
+<status status="FAIL" start="2025-11-12T22:38:29.083184" elapsed="0.000317">No keyword with name 'Given the viewport width is set to ${MOBILE_WIDTH}' found.</status>
+</kw>
+<kw name="When the page is loaded" owner="HeaderKeywords">
+<status status="NOT RUN" start="2025-11-12T22:38:29.083993" elapsed="0.000041"/>
+</kw>
+<kw name="Then the mobile navigation menu should be hidden" owner="HeaderKeywords">
+<status status="NOT RUN" start="2025-11-12T22:38:29.084560" elapsed="0.000063"/>
+</kw>
+<tag>mobile</tag>
+<status status="FAIL" start="2025-11-12T22:38:29.079532" elapsed="0.005479">No keyword with name 'Given the viewport width is set to ${MOBILE_WIDTH}' found.</status>
+</test>
+<test id="s1-s1-t17" name="Clicking Mobile Toggle Opens The Menu" line="115">
+<kw name="Given the viewport width is set to ${MOBILE_WIDTH}">
+<msg time="2025-11-12T22:38:29.089191" level="FAIL">No keyword with name 'Given the viewport width is set to ${MOBILE_WIDTH}' found.</msg>
+<status status="FAIL" start="2025-11-12T22:38:29.089119" elapsed="0.000126">No keyword with name 'Given the viewport width is set to ${MOBILE_WIDTH}' found.</status>
+</kw>
+<kw name="When I click the mobile menu toggle" owner="HeaderKeywords">
+<status status="NOT RUN" start="2025-11-12T22:38:29.089849" elapsed="0.000066"/>
+</kw>
+<kw name="Then the mobile navigation menu should be visible" owner="HeaderKeywords">
+<status status="NOT RUN" start="2025-11-12T22:38:29.090333" elapsed="0.000072"/>
+</kw>
+<tag>mobile</tag>
+<status status="FAIL" start="2025-11-12T22:38:29.086108" elapsed="0.004711">No keyword with name 'Given the viewport width is set to ${MOBILE_WIDTH}' found.</status>
+</test>
+<test id="s1-s1-t18" name="Mobile Menu Contains All Navigation Items" line="121">
+<kw name="Given the viewport width is set to ${MOBILE_WIDTH}">
+<msg time="2025-11-12T22:38:29.093636" level="FAIL">No keyword with name 'Given the viewport width is set to ${MOBILE_WIDTH}' found.</msg>
+<status status="FAIL" start="2025-11-12T22:38:29.093592" elapsed="0.000081">No keyword with name 'Given the viewport width is set to ${MOBILE_WIDTH}' found.</status>
+</kw>
+<kw name="When I open the mobile menu">
+<status status="NOT RUN" start="2025-11-12T22:38:29.094108" elapsed="0.000057"/>
+</kw>
+<kw name="Then the mobile menu should contain all 8 navigation items" owner="HeaderKeywords">
+<status status="NOT RUN" start="2025-11-12T22:38:29.094531" elapsed="0.000054"/>
+</kw>
+<tag>mobile</tag>
+<status status="FAIL" start="2025-11-12T22:38:29.091794" elapsed="0.003162">No keyword with name 'Given the viewport width is set to ${MOBILE_WIDTH}' found.</status>
+</test>
+<test id="s1-s1-t19" name="Clicking A Link In Mobile Menu Closes The Menu" line="127">
+<kw name="Given the viewport width is set to ${MOBILE_WIDTH}">
+<msg time="2025-11-12T22:38:29.099027" level="FAIL">No keyword with name 'Given the viewport width is set to ${MOBILE_WIDTH}' found.</msg>
+<status status="FAIL" start="2025-11-12T22:38:29.098946" elapsed="0.000165">No keyword with name 'Given the viewport width is set to ${MOBILE_WIDTH}' found.</status>
+</kw>
+<kw name="And the mobile menu is open" owner="Common">
+<status status="NOT RUN" start="2025-11-12T22:38:29.099587" elapsed="0.000054"/>
+</kw>
+<kw name="When I click the &quot;Services&quot; link in mobile menu" owner="HeaderKeywords">
+<status status="NOT RUN" start="2025-11-12T22:38:29.100044" elapsed="0.000051"/>
+</kw>
+<kw name="Then the mobile menu should close" owner="HeaderKeywords">
+<status status="NOT RUN" start="2025-11-12T22:38:29.100478" elapsed="0.000064"/>
+</kw>
+<tag>mobile</tag>
+<status status="FAIL" start="2025-11-12T22:38:29.095706" elapsed="0.005181">No keyword with name 'Given the viewport width is set to ${MOBILE_WIDTH}' found.</status>
+</test>
+<test id="s1-s1-t20" name="Header Has Proper Landmark Role" line="134">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:29.103420" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:29.103303" elapsed="0.337189"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:29.103033" elapsed="0.337612"/>
+</kw>
+<kw name="When the header element is examined" owner="HeaderKeywords">
+<kw name="Inspect header element properties" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:29.442116" level="INFO">Inspecting header element properties</msg>
+<arg>Inspecting header element properties</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:29.441862" elapsed="0.000344"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:29.441559" elapsed="0.000757"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:29.441189" elapsed="0.001196"/>
+</kw>
+<kw name="Then the &lt;header&gt; element should have role=&quot;banner&quot; or be a native &lt;header&gt;" owner="HeaderKeywords">
+<kw name="Validate header landmark role" owner="HeaderFunctions">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:29.475752" level="INFO">Element 'tag:header' is displayed.</msg>
+<arg>tag:header</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-12T22:38:29.443754" elapsed="0.032452"/>
+</kw>
+<msg time="2025-11-12T22:38:29.476631" level="INFO">${is_header} = True</msg>
+<var>${is_header}</var>
+<arg>Element Should Be Visible</arg>
+<arg>tag:header</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-12T22:38:29.443566" elapsed="0.033129"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Attribute Should Be">
+<msg time="2025-11-12T22:38:29.484980" level="FAIL">No keyword with name 'Element Attribute Should Be' found. Did you mean:
+    SeleniumLibrary.Element Attribute Value Should Be</msg>
+<arg>${HEADER_ELEMENT}</arg>
+<arg>${ROLE_ATTRIBUTE}</arg>
+<arg>banner</arg>
+<status status="FAIL" start="2025-11-12T22:38:29.484758" elapsed="0.000389">No keyword with name 'Element Attribute Should Be' found. Did you mean:
+    SeleniumLibrary.Element Attribute Value Should Be</status>
+</kw>
+<msg time="2025-11-12T22:38:29.485613" level="INFO">${role} = False</msg>
+<var>${role}</var>
+<arg>Element Attribute Should Be</arg>
+<arg>${HEADER_ELEMENT}</arg>
+<arg>${ROLE_ATTRIBUTE}</arg>
+<arg>banner</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-12T22:38:29.477040" elapsed="0.008668"/>
+</kw>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2025-11-12T22:38:29.488145" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<arg>${is_header} or ${role}</arg>
+<arg>Fail</arg>
+<arg>Header element should have role="banner" or be a native &lt;header&gt;</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2025-11-12T22:38:29.487754" elapsed="0.002020"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:29.443253" elapsed="0.046832"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:29.442820" elapsed="0.047401"/>
+</kw>
+<tag>accessibility</tag>
+<status status="PASS" start="2025-11-12T22:38:29.101787" elapsed="0.392909"/>
+</test>
+<test id="s1-s1-t21" name="Navigation Region Is Properly Labeled" line="140">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:29.501855" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:29.501465" elapsed="0.319854"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:29.500648" elapsed="0.320761"/>
+</kw>
+<kw name="When the navigation element is checked" owner="HeaderKeywords">
+<kw name="Examine navigation element" owner="HeaderFunctions">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:29.829016" level="INFO">Current page contains element 'css:.header-nav'.</msg>
+<arg>${NAVIGATION_MENU}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-12T22:38:29.822123" elapsed="0.006974"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:29.821969" elapsed="0.007203"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:29.821751" elapsed="0.007454"/>
+</kw>
+<kw name="Then the main &lt;nav&gt; element should have an aria-label or aria-labelledby" owner="HeaderKeywords">
+<kw name="Validate navigation labeling" owner="HeaderFunctions">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<arg>${NAVIGATION_MENU}</arg>
+<arg>${ARIA_LABEL}</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:29.829982" elapsed="0.012391"/>
+</kw>
+<msg time="2025-11-12T22:38:29.842500" level="INFO">${aria_label} = True</msg>
+<var>${aria_label}</var>
+<arg>Get Element Attribute</arg>
+<arg>${NAVIGATION_MENU}</arg>
+<arg>${ARIA_LABEL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-12T22:38:29.829880" elapsed="0.012641"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<arg>${NAVIGATION_MENU}</arg>
+<arg>${ARIA_LABELLEDBY}</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:29.842788" elapsed="0.011335"/>
+</kw>
+<msg time="2025-11-12T22:38:29.854252" level="INFO">${aria_labelledby} = True</msg>
+<var>${aria_labelledby}</var>
+<arg>Get Element Attribute</arg>
+<arg>${NAVIGATION_MENU}</arg>
+<arg>${ARIA_LABELLEDBY}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-12T22:38:29.842652" elapsed="0.011620"/>
+</kw>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2025-11-12T22:38:29.854429" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<arg>${aria_label} or ${aria_labelledby}</arg>
+<arg>Fail</arg>
+<arg>Main &lt;nav&gt; element should have an aria-label or aria-labelledby</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2025-11-12T22:38:29.854400" elapsed="0.000466"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:29.829732" elapsed="0.025222"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:29.829529" elapsed="0.025460"/>
+</kw>
+<tag>accessibility</tag>
+<status status="PASS" start="2025-11-12T22:38:29.498155" elapsed="0.356949"/>
+</test>
+<test id="s1-s1-t22" name="Mobile Toggle Has Aria-expanded State" line="146">
+<kw name="Given the viewport is set to mobile-sized" owner="Common">
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>${MOBILE_WIDTH}</arg>
+<arg>800</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-11-12T22:38:29.855958" elapsed="0.371408"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:29.855767" elapsed="0.371702"/>
+</kw>
+<kw name="When the mobile menu toggle is checked" owner="HeaderKeywords">
+<kw name="Inspect mobile menu toggle" owner="HeaderFunctions">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:30.237721" level="INFO">Current page contains element 'css:.header-burger-icon'.</msg>
+<arg>${MOBILE_MENU_TOGGLE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-12T22:38:30.228826" elapsed="0.008982"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:30.228633" elapsed="0.009251"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:30.228382" elapsed="0.009536"/>
+</kw>
+<kw name="Then the mobile menu toggle should have aria-expanded=&quot;false&quot; initially" owner="HeaderKeywords">
+<kw name="Verify mobile toggle initial state" owner="HeaderFunctions">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:30.266243" level="INFO">${expanded} = false</msg>
+<var>${expanded}</var>
+<arg>${MOBILE_MENU_TOGGLE}</arg>
+<arg>${ARIA_EXPANDED}</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:30.238561" elapsed="0.027719"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${expanded}</arg>
+<arg>false</arg>
+<arg>Mobile menu toggle should have aria-expanded="false" initially</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-11-12T22:38:30.266423" elapsed="0.000194"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:30.238411" elapsed="0.028263"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:30.238192" elapsed="0.028515"/>
+</kw>
+<kw name="When I open the mobile menu">
+<msg time="2025-11-12T22:38:30.267021" level="FAIL">Multiple keywords with name 'I open the mobile menu' found. Give the full name of the keyword you want to use:
+    Common.I open the mobile menu
+    HeaderKeywords.I open the mobile menu</msg>
+<status status="FAIL" start="2025-11-12T22:38:30.266982" elapsed="0.000078">Multiple keywords with name 'I open the mobile menu' found. Give the full name of the keyword you want to use:
+    Common.I open the mobile menu
+    HeaderKeywords.I open the mobile menu</status>
+</kw>
+<kw name="Then the mobile menu toggle should have aria-expanded=&quot;true&quot;" owner="HeaderKeywords">
+<status status="NOT RUN" start="2025-11-12T22:38:30.267346" elapsed="0.000028"/>
+</kw>
+<tag>accessibility</tag>
+<status status="FAIL" start="2025-11-12T22:38:29.855410" elapsed="0.412163">Multiple keywords with name 'I open the mobile menu' found. Give the full name of the keyword you want to use:
+    Common.I open the mobile menu
+    HeaderKeywords.I open the mobile menu</status>
+</test>
+<test id="s1-s1-t23" name="Header Loads Within 500ms Of Page Load" line="154">
+<kw name="Given the page is opened" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:30.269975" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:30.269729" elapsed="0.298649"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:30.269188" elapsed="0.299318"/>
+</kw>
+<kw name="When the loading time is measured" owner="HeaderKeywords">
+<kw name="Time page loading process" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:30.569756" level="INFO">Timing page loading process</msg>
+<arg>Timing page loading process</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:30.569663" elapsed="0.000130"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:30.569132" elapsed="0.000709"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:30.568896" elapsed="0.000976"/>
+</kw>
+<kw name="Then the header should be fully rendered within 500 milliseconds" owner="HeaderKeywords">
+<kw name="Measure header loading time" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:30.570924" level="INFO">Measuring header loading time</msg>
+<arg>Measuring header loading time</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:30.570811" elapsed="0.000173"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:30.570569" elapsed="0.000496"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:30.570263" elapsed="0.000864"/>
+</kw>
+<tag>performance</tag>
+<status status="PASS" start="2025-11-12T22:38:30.268480" elapsed="0.302924"/>
+</test>
+<test id="s1-s1-t24" name="Header Maintains Consistent Height Across Pages" line="160">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:30.573157" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:30.572995" elapsed="0.173114"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:30.572691" elapsed="0.173666"/>
+</kw>
+<kw name="When I navigate to &quot;Services&quot; page" owner="HeaderKeywords">
+<kw name="Navigate to services page" owner="HeaderFunctions">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:30.748241" level="INFO">Opening url 'http://localhost:8080/services'</msg>
+<msg time="2025-11-12T22:38:33.212291" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-12T22:38:33.212617" level="FAIL">WebDriverException: Message: unknown error: cannot determine loading status
+from unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=142.0.7444.60)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7a7a7a235
+	0x7ff7a77d2650
+	0x7ff7a75616dd
+	0x7ff7a755e228
+	0x7ff7a754eba9
+	0x7ff7a75509d7
+	0x7ff7a754f160
+	0x7ff7a754e917
+	0x7ff7a754e5db
+	0x7ff7a754c145
+	0x7ff7a754cbcb
+	0x7ff7a7578beb
+	0x7ff7a756bfa0
+	0x7ff7a756be3c
+	0x7ff7a755ced5
+	0x7ff7a755d3c3
+	0x7ff7a754ea45
+	0x7ff7a754fc87
+	0x7ff7a754f11c
+	0x7ff7a754e917
+	0x7ff7a754e5db
+	0x7ff7a754c145
+	0x7ff7a754c9dc
+	0x7ff7a75659ea
+	0x7ff7a760c8be
+	0x7ff7a75e2b0a
+	0x7ff7a760baba
+	0x7ff7a75ab0ed
+	0x7ff7a75abf63
+	0x7ff7a7aa5d60
+	0x7ff7a7a9fe8a
+	0x7ff7a7ac1005
+	0x7ff7a77ed73e
+	0x7ff7a77f4e3f
+	0x7ff7a77db7e4
+	0x7ff7a77db99f
+	0x7ff7a77c1908
+	0x7fff0599e8d7
+	0x7fff05d0c53c
+</msg>
+<arg>${SERVICES_PAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="FAIL" start="2025-11-12T22:38:30.747950" elapsed="2.467322">WebDriverException: Message: unknown error: cannot determine loading status
+from unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=142.0.7444.60)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7a7a7a235
+	0x7ff7a77d2650
+	0x7ff7a75616dd
+	0x7ff7a755e228
+	0x7ff7a754eba9
+	0x7ff7a75509d7
+	0x7ff7a754f160
+	0x7ff7a754e917
+	0x7ff7a754e5db
+	0x7ff7a754c145
+	0x7ff7a754cbcb
+	0x7ff7a7578beb
+	0x7ff7a756bfa0
+	0x7ff7a756be3c
+	0x7ff7a755ced5
+    [ Message content over the limit has been removed. ]
+	0x7ff7a754e917
+	0x7ff7a754e5db
+	0x7ff7a754c145
+	0x7ff7a754c9dc
+	0x7ff7a75659ea
+	0x7ff7a760c8be
+	0x7ff7a75e2b0a
+	0x7ff7a760baba
+	0x7ff7a75ab0ed
+	0x7ff7a75abf63
+	0x7ff7a7aa5d60
+	0x7ff7a7a9fe8a
+	0x7ff7a7ac1005
+	0x7ff7a77ed73e
+	0x7ff7a77f4e3f
+	0x7ff7a77db7e4
+	0x7ff7a77db99f
+	0x7ff7a77c1908
+	0x7fff0599e8d7
+	0x7fff05d0c53c</status>
+</kw>
+<status status="FAIL" start="2025-11-12T22:38:30.747502" elapsed="2.467918">WebDriverException: Message: unknown error: cannot determine loading status
+from unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=142.0.7444.60)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7a7a7a235
+	0x7ff7a77d2650
+	0x7ff7a75616dd
+	0x7ff7a755e228
+	0x7ff7a754eba9
+	0x7ff7a75509d7
+	0x7ff7a754f160
+	0x7ff7a754e917
+	0x7ff7a754e5db
+	0x7ff7a754c145
+	0x7ff7a754cbcb
+	0x7ff7a7578beb
+	0x7ff7a756bfa0
+	0x7ff7a756be3c
+	0x7ff7a755ced5
+    [ Message content over the limit has been removed. ]
+	0x7ff7a754e917
+	0x7ff7a754e5db
+	0x7ff7a754c145
+	0x7ff7a754c9dc
+	0x7ff7a75659ea
+	0x7ff7a760c8be
+	0x7ff7a75e2b0a
+	0x7ff7a760baba
+	0x7ff7a75ab0ed
+	0x7ff7a75abf63
+	0x7ff7a7aa5d60
+	0x7ff7a7a9fe8a
+	0x7ff7a7ac1005
+	0x7ff7a77ed73e
+	0x7ff7a77f4e3f
+	0x7ff7a77db7e4
+	0x7ff7a77db99f
+	0x7ff7a77c1908
+	0x7fff0599e8d7
+	0x7fff05d0c53c</status>
+</kw>
+<status status="FAIL" start="2025-11-12T22:38:30.746961" elapsed="2.468540">WebDriverException: Message: unknown error: cannot determine loading status
+from unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=142.0.7444.60)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7a7a7a235
+	0x7ff7a77d2650
+	0x7ff7a75616dd
+	0x7ff7a755e228
+	0x7ff7a754eba9
+	0x7ff7a75509d7
+	0x7ff7a754f160
+	0x7ff7a754e917
+	0x7ff7a754e5db
+	0x7ff7a754c145
+	0x7ff7a754cbcb
+	0x7ff7a7578beb
+	0x7ff7a756bfa0
+	0x7ff7a756be3c
+	0x7ff7a755ced5
+    [ Message content over the limit has been removed. ]
+	0x7ff7a754e917
+	0x7ff7a754e5db
+	0x7ff7a754c145
+	0x7ff7a754c9dc
+	0x7ff7a75659ea
+	0x7ff7a760c8be
+	0x7ff7a75e2b0a
+	0x7ff7a760baba
+	0x7ff7a75ab0ed
+	0x7ff7a75abf63
+	0x7ff7a7aa5d60
+	0x7ff7a7a9fe8a
+	0x7ff7a7ac1005
+	0x7ff7a77ed73e
+	0x7ff7a77f4e3f
+	0x7ff7a77db7e4
+	0x7ff7a77db99f
+	0x7ff7a77c1908
+	0x7fff0599e8d7
+	0x7fff05d0c53c</status>
+</kw>
+<kw name="Then the header height should match the homepage header height" owner="HeaderKeywords">
+<status status="NOT RUN" start="2025-11-12T22:38:33.215953" elapsed="0.000035"/>
+</kw>
+<tag>visual</tag>
+<status status="FAIL" start="2025-11-12T22:38:30.572210" elapsed="2.644131">WebDriverException: Message: unknown error: cannot determine loading status
+from unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=142.0.7444.60)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7a7a7a235
+	0x7ff7a77d2650
+	0x7ff7a75616dd
+	0x7ff7a755e228
+	0x7ff7a754eba9
+	0x7ff7a75509d7
+	0x7ff7a754f160
+	0x7ff7a754e917
+	0x7ff7a754e5db
+	0x7ff7a754c145
+	0x7ff7a754cbcb
+	0x7ff7a7578beb
+	0x7ff7a756bfa0
+	0x7ff7a756be3c
+	0x7ff7a755ced5
+    [ Message content over the limit has been removed. ]
+	0x7ff7a754e917
+	0x7ff7a754e5db
+	0x7ff7a754c145
+	0x7ff7a754c9dc
+	0x7ff7a75659ea
+	0x7ff7a760c8be
+	0x7ff7a75e2b0a
+	0x7ff7a760baba
+	0x7ff7a75ab0ed
+	0x7ff7a75abf63
+	0x7ff7a7aa5d60
+	0x7ff7a7a9fe8a
+	0x7ff7a7ac1005
+	0x7ff7a77ed73e
+	0x7ff7a77f4e3f
+	0x7ff7a77db7e4
+	0x7ff7a77db99f
+	0x7ff7a77c1908
+	0x7fff0599e8d7
+	0x7fff05d0c53c</status>
+</test>
+<test id="s1-s1-t25" name="No Layout Shift Occurs During Header Rendering" line="166">
+<kw name="Given the page is opened" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:33.218360" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:33.218194" elapsed="0.423702"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:33.217877" elapsed="0.424180"/>
+</kw>
+<kw name="When the header is rendered" owner="HeaderKeywords">
+<kw name="Wait for header to render" owner="HeaderFunctions">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${HEADER_ELEMENT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-12T22:38:33.643876" elapsed="0.033042"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:33.643297" elapsed="0.033768"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:33.642699" elapsed="0.034437"/>
+</kw>
+<kw name="Then the header should not cause cumulative layout shift (CLS)" owner="HeaderKeywords">
+<kw name="Check for layout shifts" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:33.678898" level="INFO">Checking for layout shifts</msg>
+<arg>Checking for layout shifts</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:33.678735" elapsed="0.000238"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:33.678201" elapsed="0.000869"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:33.677743" elapsed="0.001395"/>
+</kw>
+<tag>visual</tag>
+<status status="PASS" start="2025-11-12T22:38:33.217441" elapsed="0.461982"/>
+</test>
+<test id="s1-s1-t26" name="Header Does Not Contain Inline Scripts Or Eval()" line="172">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:33.680937" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:33.680780" elapsed="0.305993"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:33.680490" elapsed="0.306395"/>
+</kw>
+<kw name="When the header source is examined" owner="HeaderKeywords">
+<kw name="Inspect header html source" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:33.988042" level="INFO">Inspecting header html source</msg>
+<arg>Inspecting header html source</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:33.987928" elapsed="0.000169"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:33.987645" elapsed="0.000522"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:33.987285" elapsed="0.000923"/>
+</kw>
+<kw name="Then the header HTML should not include inline JavaScript or dangerous eval patterns" owner="HeaderKeywords">
+<kw name="Scan header for unsafe scripts" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:33.989088" level="INFO">Scanning header for unsafe scripts</msg>
+<arg>Scanning header for unsafe scripts</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:33.988986" elapsed="0.000144"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:33.988750" elapsed="0.000480"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:33.988500" elapsed="0.000773"/>
+</kw>
+<tag>security</tag>
+<status status="PASS" start="2025-11-12T22:38:33.679977" elapsed="0.309552"/>
+</test>
+<test id="s1-s1-t27" name="Logo Links To Root With Rel=home Or Equivalent Semantic Practice" line="178">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:33.991466" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:33.991343" elapsed="0.316082"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:33.991077" elapsed="0.316532"/>
+</kw>
+<kw name="When the logo link is checked" owner="HeaderKeywords">
+<kw name="Examine logo link properties" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:34.308533" level="INFO">Examining logo link properties</msg>
+<arg>Examining logo link properties</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.308457" elapsed="0.000110"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:34.308302" elapsed="0.000307"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:34.308083" elapsed="0.000553"/>
+</kw>
+<kw name="Then the logo link should point to &quot;/&quot; and support SEO best practices" owner="HeaderKeywords">
+<kw name="Validate logo link destination" owner="HeaderFunctions">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:34.330569" level="INFO">${href} = https://jetruby.com/</msg>
+<var>${href}</var>
+<arg>${HEADER_LOGO}</arg>
+<arg>href</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.309668" elapsed="0.020955"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<msg time="2025-11-12T22:38:34.331614" level="FAIL">Logo link should point to "/": https://jetruby.com/ != /</msg>
+<arg>${href}</arg>
+<arg>/</arg>
+<arg>Logo link should point to "/"</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="FAIL" start="2025-11-12T22:38:34.330900" elapsed="0.000844">Logo link should point to "/": https://jetruby.com/ != /</status>
+</kw>
+<status status="FAIL" start="2025-11-12T22:38:34.309155" elapsed="0.022743">Logo link should point to "/": https://jetruby.com/ != /</status>
+</kw>
+<status status="FAIL" start="2025-11-12T22:38:34.308963" elapsed="0.023017">Logo link should point to "/": https://jetruby.com/ != /</status>
+</kw>
+<tag>seo</tag>
+<status status="FAIL" start="2025-11-12T22:38:33.990239" elapsed="0.342092">Logo link should point to "/": https://jetruby.com/ != /</status>
+</test>
+<test id="s1-s1-t28" name="Header Text Supports UTF-8 Characters" line="184">
+<kw name="Given the site language is set to French" owner="HeaderKeywords">
+<kw name="Change site language to French" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:34.333800" level="INFO">Changing site language to French</msg>
+<arg>Changing site language to French</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.333717" elapsed="0.000123"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:34.333559" elapsed="0.000334"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:34.333344" elapsed="0.000579"/>
+</kw>
+<kw name="When the navigation items are displayed" owner="HeaderKeywords">
+<kw name="Verify navigation items visibility" owner="HeaderFunctions">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:34.344378" level="INFO">@{links} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.176")&gt; | &lt;selenium.webd...</msg>
+<var>@{links}</var>
+<arg>${NAVIGATION_LINKS}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.334618" elapsed="0.009886"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-11-12T22:38:34.345269" level="INFO">Length is 8.</msg>
+<msg time="2025-11-12T22:38:34.345379" level="INFO">${count} = 8</msg>
+<var>${count}</var>
+<arg>${links}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.344936" elapsed="0.000482"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:34.345782" level="INFO">Found 8 navigation items</msg>
+<arg>Found ${count} navigation items</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.345619" elapsed="0.000366"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-11-12T22:38:34.346241" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${count}</arg>
+<arg>8</arg>
+<arg>Expected 8 navigation items but found ${count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.346094" elapsed="0.000194"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:34.346769" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.176")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.346627" elapsed="0.000162"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:34.371270" level="INFO">${text} = </msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.346879" elapsed="0.024432"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:34.371598" level="INFO">Checking visibility of navigation item "" (index 0)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.371454" elapsed="0.000179"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:34.424446" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-12T22:38:34.424573" level="FAIL">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.176")&gt;' should be visible, but it is not.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-11-12T22:38:34.372142" elapsed="0.053178">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.176")&gt;' should be visible, but it is not.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2025-11-12T22:38:34.371946" elapsed="0.053467">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.176")&gt;' should be visible, but it is not.</status>
+</kw>
+<var name="${index}">0</var>
+<status status="FAIL" start="2025-11-12T22:38:34.346532" elapsed="0.078933">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.176")&gt;' should be visible, but it is not.</status>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:34.425893" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.177")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.425711" elapsed="0.000211"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:34.437544" level="INFO">${text} = </msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.426049" elapsed="0.011544"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:34.437928" level="INFO">Checking visibility of navigation item "" (index 1)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.437773" elapsed="0.000191"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:34.558220" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-12T22:38:34.558347" level="FAIL">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.177")&gt;' should be visible, but it is not.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-11-12T22:38:34.438199" elapsed="0.120618">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.177")&gt;' should be visible, but it is not.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2025-11-12T22:38:34.438060" elapsed="0.120846">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.177")&gt;' should be visible, but it is not.</status>
+</kw>
+<var name="${index}">1</var>
+<status status="FAIL" start="2025-11-12T22:38:34.425589" elapsed="0.133374">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.177")&gt;' should be visible, but it is not.</status>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:34.559405" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.178")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.559192" elapsed="0.000246"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:34.573579" level="INFO">${text} = </msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.559550" elapsed="0.014074"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:34.573929" level="INFO">Checking visibility of navigation item "" (index 2)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.573778" elapsed="0.000191"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:34.655834" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-12T22:38:34.656094" level="FAIL">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.178")&gt;' should be visible, but it is not.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-11-12T22:38:34.574197" elapsed="0.083378">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.178")&gt;' should be visible, but it is not.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2025-11-12T22:38:34.574090" elapsed="0.083764">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.178")&gt;' should be visible, but it is not.</status>
+</kw>
+<var name="${index}">2</var>
+<status status="FAIL" start="2025-11-12T22:38:34.559076" elapsed="0.098972">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.178")&gt;' should be visible, but it is not.</status>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:34.659735" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.179")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.658560" elapsed="0.001241"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:34.675146" level="INFO">${text} = </msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.660084" elapsed="0.015126"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:34.675676" level="INFO">Checking visibility of navigation item "" (index 3)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.675444" elapsed="0.000292"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:34.737088" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-12T22:38:34.737210" level="FAIL">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.179")&gt;' should be visible, but it is not.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-11-12T22:38:34.676069" elapsed="0.061594">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.179")&gt;' should be visible, but it is not.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2025-11-12T22:38:34.675892" elapsed="0.061860">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.179")&gt;' should be visible, but it is not.</status>
+</kw>
+<var name="${index}">3</var>
+<status status="FAIL" start="2025-11-12T22:38:34.658403" elapsed="0.079400">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.179")&gt;' should be visible, but it is not.</status>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:34.738172" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.180")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.738024" elapsed="0.000171"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:34.745539" level="INFO">${text} = </msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.738289" elapsed="0.007288"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:34.745864" level="INFO">Checking visibility of navigation item "" (index 4)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.745718" elapsed="0.000182"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:34.792599" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-12T22:38:34.792732" level="FAIL">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.180")&gt;' should be visible, but it is not.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-11-12T22:38:34.746091" elapsed="0.047152">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.180")&gt;' should be visible, but it is not.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2025-11-12T22:38:34.745992" elapsed="0.047352">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.180")&gt;' should be visible, but it is not.</status>
+</kw>
+<var name="${index}">4</var>
+<status status="FAIL" start="2025-11-12T22:38:34.737918" elapsed="0.055485">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.180")&gt;' should be visible, but it is not.</status>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:34.794534" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.181")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.793626" elapsed="0.000936"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:34.801568" level="INFO">${text} = </msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.794688" elapsed="0.006918"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:34.801886" level="INFO">Checking visibility of navigation item "" (index 5)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.801745" elapsed="0.000172"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:34.855093" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-12T22:38:34.855216" level="FAIL">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.181")&gt;' should be visible, but it is not.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-11-12T22:38:34.802104" elapsed="0.053584">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.181")&gt;' should be visible, but it is not.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2025-11-12T22:38:34.802005" elapsed="0.053771">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.181")&gt;' should be visible, but it is not.</status>
+</kw>
+<var name="${index}">5</var>
+<status status="FAIL" start="2025-11-12T22:38:34.793520" elapsed="0.062307">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.181")&gt;' should be visible, but it is not.</status>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:34.856190" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.182")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.856040" elapsed="0.000173"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:34.867968" level="INFO">${text} = </msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.856309" elapsed="0.011699"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:34.868304" level="INFO">Checking visibility of navigation item "" (index 6)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.868159" elapsed="0.000180"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:34.939643" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-12T22:38:34.939845" level="FAIL">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.182")&gt;' should be visible, but it is not.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-11-12T22:38:34.868521" elapsed="0.072199">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.182")&gt;' should be visible, but it is not.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2025-11-12T22:38:34.868427" elapsed="0.072433">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.182")&gt;' should be visible, but it is not.</status>
+</kw>
+<var name="${index}">6</var>
+<status status="FAIL" start="2025-11-12T22:38:34.855938" elapsed="0.085057">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.182")&gt;' should be visible, but it is not.</status>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-11-12T22:38:34.942367" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.183")&gt;</msg>
+<var>${link}</var>
+<arg>${links}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.941666" elapsed="0.000809"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:34.957544" level="INFO">${text} = </msg>
+<var>${text}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.942981" elapsed="0.014625"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:34.958070" level="INFO">Checking visibility of navigation item "" (index 7)</msg>
+<arg>Checking visibility of navigation item "${text}" (index ${index})</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:34.957835" elapsed="0.000294"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:35.024338" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-12T22:38:35.024552" level="FAIL">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.183")&gt;' should be visible, but it is not.</msg>
+<arg>${link}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-11-12T22:38:34.958488" elapsed="0.066746">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.183")&gt;' should be visible, but it is not.</status>
+</kw>
+<arg>Element Should Be Visible</arg>
+<arg>${link}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2025-11-12T22:38:34.958293" elapsed="0.067076">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.183")&gt;' should be visible, but it is not.</status>
+</kw>
+<var name="${index}">7</var>
+<status status="FAIL" start="2025-11-12T22:38:34.941213" elapsed="0.084234">The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.183")&gt;' should be visible, but it is not.</status>
+</iter>
+<var>${index}</var>
+<value>${count}</value>
+<status status="FAIL" start="2025-11-12T22:38:34.346362" elapsed="0.679186">Several failures occurred:
+
+1) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.176")&gt;' should be visible, but it is not.
+
+2) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.177")&gt;' should be visible, but it is not.
+
+3) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.178")&gt;' should be visible, but it is not.
+
+4) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.179")&gt;' should be visible, but it is not.
+
+5) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.180")&gt;' should be visible, but it is not.
+
+6) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.181")&gt;' should be visible, but it is not.
+
+7) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.182")&gt;' should be visible, but it is not.
+
+8) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.183")&gt;' should be visible, but it is not.</status>
+</for>
+<status status="FAIL" start="2025-11-12T22:38:34.334458" elapsed="0.691260">Several failures occurred:
+
+1) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.176")&gt;' should be visible, but it is not.
+
+2) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.177")&gt;' should be visible, but it is not.
+
+3) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.178")&gt;' should be visible, but it is not.
+
+4) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.179")&gt;' should be visible, but it is not.
+
+5) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.180")&gt;' should be visible, but it is not.
+
+6) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.181")&gt;' should be visible, but it is not.
+
+7) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.182")&gt;' should be visible, but it is not.
+
+8) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.183")&gt;' should be visible, but it is not.</status>
+</kw>
+<status status="FAIL" start="2025-11-12T22:38:34.334234" elapsed="0.691603">Several failures occurred:
+
+1) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.176")&gt;' should be visible, but it is not.
+
+2) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.177")&gt;' should be visible, but it is not.
+
+3) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.178")&gt;' should be visible, but it is not.
+
+4) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.179")&gt;' should be visible, but it is not.
+
+5) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.180")&gt;' should be visible, but it is not.
+
+6) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.181")&gt;' should be visible, but it is not.
+
+7) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.182")&gt;' should be visible, but it is not.
+
+8) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.183")&gt;' should be visible, but it is not.</status>
+</kw>
+<kw name="Then navigation items should display correctly with accented characters" owner="HeaderKeywords">
+<kw name="Verify accented character display" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:35.026825" level="INFO">Verifying accented character display</msg>
+<arg>Verifying accented character display</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:35.026729" elapsed="0.000146"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.026553" elapsed="0.000383"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.026312" elapsed="0.000666"/>
+</kw>
+<tag>internationalization</tag>
+<status status="FAIL" start="2025-11-12T22:38:34.332974" elapsed="0.694402">Several failures occurred:
+
+1) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.176")&gt;' should be visible, but it is not.
+
+2) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.177")&gt;' should be visible, but it is not.
+
+3) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.178")&gt;' should be visible, but it is not.
+
+4) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.179")&gt;' should be visible, but it is not.
+
+5) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.180")&gt;' should be visible, but it is not.
+
+6) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.181")&gt;' should be visible, but it is not.
+
+7) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.182")&gt;' should be visible, but it is not.
+
+8) The element '&lt;selenium.webdriver.remote.webelement.WebElement (session="57ec6ef0d0da64dc63855469266b6f3e", element="f.DDE450737E1CF9248EECABCB3A6FA290.d.5D69CDD320CB933468C5BB84ECEAFFBC.e.183")&gt;' should be visible, but it is not.</status>
+</test>
+<test id="s1-s1-t29" name="Navigation Links Show Visual Feedback On Hover" line="190">
+<kw name="Given the viewport is set to desktop-sized" owner="Common">
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>${DESKTOP_WIDTH}</arg>
+<arg>800</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-11-12T22:38:35.029168" elapsed="0.082801"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.028910" elapsed="0.083230"/>
+</kw>
+<kw name="When I hover over the &quot;Portfolio&quot; link" owner="HeaderKeywords">
+<kw name="Hover over portfolio link" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:35.114192" level="INFO">Hovering over portfolio link</msg>
+<arg>Hovering over portfolio link</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:35.113828" elapsed="0.000536"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.113104" elapsed="0.001368"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.112611" elapsed="0.002383"/>
+</kw>
+<kw name="Then it should display a hover effect (e.g., color change, underline)" owner="HeaderKeywords">
+<kw name="Verify hover effect" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:35.117247" level="INFO">Verifying hover effect</msg>
+<arg>Verifying hover effect</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:35.117046" elapsed="0.000291"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.116637" elapsed="0.000820"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.115992" elapsed="0.001543"/>
+</kw>
+<tag>hover-states</tag>
+<status status="PASS" start="2025-11-12T22:38:35.028382" elapsed="0.089671"/>
+</test>
+<test id="s1-s1-t30" name="All Interactive Elements Show Visible Focus Indicator" line="196">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:35.121586" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:35.121144" elapsed="0.310863"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.120353" elapsed="0.311766"/>
+</kw>
+<kw name="When I tab to the &quot;Contact&quot; button" owner="HeaderKeywords">
+<kw name="Tab to contact button" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:35.432930" level="INFO">Tabbing to contact button</msg>
+<arg>Tabbing to contact button</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:35.432854" elapsed="0.000110"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.432693" elapsed="0.000310"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.432493" elapsed="0.000539"/>
+</kw>
+<kw name="Then it should display a clear focus ring or outline" owner="HeaderKeywords">
+<kw name="Verify focus indicator" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:35.433643" level="INFO">Verifying focus indicator</msg>
+<arg>Verifying focus indicator</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:35.433581" elapsed="0.000091"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.433366" elapsed="0.000345"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.433221" elapsed="0.000517"/>
+</kw>
+<tag>focus-states</tag>
+<status status="PASS" start="2025-11-12T22:38:35.119380" elapsed="0.314598"/>
+</test>
+<test id="s1-s1-t31" name="Header Remains Fixed Or Behaves As Designed On Scroll" line="202">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:35.436088" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:35.435921" elapsed="0.312942"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.435593" elapsed="0.313461"/>
+</kw>
+<kw name="When I scroll down 200 pixels" owner="HeaderKeywords">
+<kw name="Scroll page vertically" owner="HeaderFunctions">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:35.750233" level="INFO">Executing JavaScript:
+window.scrollBy(0, 200)
+Without any arguments.</msg>
+<arg>window.scrollBy(0, ${pixels})</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-12T22:38:35.749947" elapsed="0.007430"/>
+</kw>
+<arg>200</arg>
+<status status="PASS" start="2025-11-12T22:38:35.749780" elapsed="0.007792"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.749547" elapsed="0.008102"/>
+</kw>
+<kw name="Then the header should maintain its expected scroll behavior (fixed/sticky/collapsible)" owner="HeaderKeywords">
+<kw name="Verify header scroll behavior" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:35.758814" level="INFO">Verifying header scroll behavior</msg>
+<arg>Verifying header scroll behavior</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:35.758713" elapsed="0.000139"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.758407" elapsed="0.000493"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.758060" elapsed="0.000869"/>
+</kw>
+<tag>scrolling</tag>
+<status status="PASS" start="2025-11-12T22:38:35.434833" elapsed="0.324401"/>
+</test>
+<test id="s1-s1-t32" name="Header Renders Correctly Even If One Asset Fails To Load" line="208">
+<kw name="Given the logo image fails to load" owner="HeaderKeywords">
+<kw name="Simulate logo image failure" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:35.761054" level="INFO">Simulating logo image failure</msg>
+<arg>Simulating logo image failure</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:35.760963" elapsed="0.000132"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.760786" elapsed="0.000361"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.760438" elapsed="0.000774"/>
+</kw>
+<kw name="When the header is rendered" owner="HeaderKeywords">
+<kw name="Wait for header to render" owner="HeaderFunctions">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${HEADER_ELEMENT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-12T22:38:35.762645" elapsed="0.006635"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.762219" elapsed="0.007241"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.761885" elapsed="0.007653"/>
+</kw>
+<kw name="Then the header layout should not break" owner="HeaderKeywords">
+<kw name="Verify header layout integrity" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:35.770312" level="INFO">Verifying header layout integrity</msg>
+<arg>Verifying header layout integrity</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:35.770232" elapsed="0.000115"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.770093" elapsed="0.000303"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.769886" elapsed="0.000538"/>
+</kw>
+<tag>error-resilience</tag>
+<status status="PASS" start="2025-11-12T22:38:35.759928" elapsed="0.010622"/>
+</test>
+<test id="s1-s1-t33" name="Header Layout Is Consistent In Chrome, Firefox, And Safari" line="214">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:35.771528" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:35.771439" elapsed="0.323895"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:35.771265" elapsed="0.324261"/>
+</kw>
+<kw name="When the header is rendered in different browsers">
+<msg time="2025-11-12T22:38:36.097281" level="FAIL">No keyword with name 'When the header is rendered in different browsers' found.</msg>
+<status status="FAIL" start="2025-11-12T22:38:36.097237" elapsed="0.000079">No keyword with name 'When the header is rendered in different browsers' found.</status>
+</kw>
+<kw name="Then the header should render with consistent spacing and alignment across major browsers" owner="HeaderKeywords">
+<status status="NOT RUN" start="2025-11-12T22:38:36.097729" elapsed="0.000066"/>
+</kw>
+<tag>cross-browser</tag>
+<status status="FAIL" start="2025-11-12T22:38:35.770950" elapsed="0.327202">No keyword with name 'When the header is rendered in different browsers' found.</status>
+</test>
+<test id="s1-s1-t34" name="Entire Header Is Navigable Via Keyboard Only" line="220">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:36.100134" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:36.099953" elapsed="0.305114"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.099618" elapsed="0.305602"/>
+</kw>
+<kw name="When I use only Tab and Enter keys" owner="HeaderKeywords">
+<kw name="Navigate with keyboard only" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:36.406657" level="INFO">Navigating with keyboard only</msg>
+<arg>Navigating with keyboard only</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:36.406454" elapsed="0.000273"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.406030" elapsed="0.000790"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.405655" elapsed="0.001229"/>
+</kw>
+<kw name="Then I should be able to access all interactive header elements" owner="HeaderKeywords">
+<kw name="Verify keyboard accessibility" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:36.407925" level="INFO">Verifying keyboard accessibility</msg>
+<arg>Verifying keyboard accessibility</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:36.407803" elapsed="0.000177"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.407538" elapsed="0.000519"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.407214" elapsed="0.000902"/>
+</kw>
+<tag>keyboard-navigation</tag>
+<status status="PASS" start="2025-11-12T22:38:36.098980" elapsed="0.309400"/>
+</test>
+<test id="s1-s1-t35" name="Header Elements Are Tappable On Touch Devices" line="226">
+<kw name="Given I am on a touch-enabled device or emulator" owner="HeaderKeywords">
+<kw name="Switch to touch device mode" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:36.410412" level="INFO">Switching to touch device mode</msg>
+<arg>Switching to touch device mode</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:36.410298" elapsed="0.000175"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.410044" elapsed="0.000512"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.409690" elapsed="0.000929"/>
+</kw>
+<kw name="When I tap the &quot;Contact&quot; button">
+<msg time="2025-11-12T22:38:36.414077" level="FAIL">No keyword with name 'When I tap the "Contact" button' found.</msg>
+<status status="FAIL" start="2025-11-12T22:38:36.414005" elapsed="0.000134">No keyword with name 'When I tap the "Contact" button' found.</status>
+</kw>
+<kw name="Then the &quot;Contact&quot; button should respond to tap gestures" owner="HeaderKeywords">
+<status status="NOT RUN" start="2025-11-12T22:38:36.414531" elapsed="0.000050"/>
+</kw>
+<tag>touch</tag>
+<status status="FAIL" start="2025-11-12T22:38:36.409098" elapsed="0.005788">No keyword with name 'When I tap the "Contact" button' found.</status>
+</test>
+<test id="s1-s1-t36" name="Header Appears Appropriately In Print Preview" line="232">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:36.416975" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:36.416876" elapsed="0.179802"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.416670" elapsed="0.180749"/>
+</kw>
+<kw name="When I open print preview" owner="HeaderKeywords">
+<kw name="Open print preview dialog" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:36.600760" level="INFO">Opening print preview dialog</msg>
+<arg>Opening print preview dialog</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:36.600185" elapsed="0.001156"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.599080" elapsed="0.002916"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.598371" elapsed="0.004147"/>
+</kw>
+<kw name="Then the header should be visible and legible" owner="HeaderKeywords">
+<kw name="Verify print preview header" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:36.605897" level="INFO">Verifying print preview header</msg>
+<arg>Verifying print preview header</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:36.605397" elapsed="0.000683"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.604736" elapsed="0.001509"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.603667" elapsed="0.002700"/>
+</kw>
+<tag>print</tag>
+<status status="PASS" start="2025-11-12T22:38:36.416028" elapsed="0.190939"/>
+</test>
+<test id="s1-s1-t37" name="Header Adapts To System Dark Mode" line="238">
+<kw name="Given the OS is set to dark mode" owner="Common">
+<kw name="No Operation" owner="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" start="2025-11-12T22:38:36.610579" elapsed="0.000561"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.609087" elapsed="0.002414"/>
+</kw>
+<kw name="When the page is loaded" owner="HeaderKeywords">
+<kw name="Wait for page to load completely" owner="HeaderFunctions">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${HEADER_ELEMENT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-12T22:38:36.615358" elapsed="0.152386"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.613841" elapsed="0.154018"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.612912" elapsed="0.154995"/>
+</kw>
+<kw name="Then the header should use appropriate dark-mode colors" owner="HeaderKeywords">
+<kw name="Verify dark mode styling" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:36.769099" level="INFO">Verifying dark mode styling</msg>
+<arg>Verifying dark mode styling</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:36.768837" elapsed="0.000352"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.768545" elapsed="0.000761"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.768244" elapsed="0.001142"/>
+</kw>
+<tag>dark-mode</tag>
+<status status="PASS" start="2025-11-12T22:38:36.607941" elapsed="0.161943"/>
+</test>
+<test id="s1-s1-t38" name="Clicks On Header Links Trigger Expected Tracking Events" line="244">
+<kw name="Given I am on the homepage" owner="Common">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-12T22:38:36.771895" level="INFO">Opening url 'https://jetruby.com/'</msg>
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-12T22:38:36.771739" elapsed="0.335522"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:36.771444" elapsed="0.335985"/>
+</kw>
+<kw name="When I click the &quot;Blog&quot; link" owner="HeaderKeywords">
+<kw name="Click on blog link" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:37.108435" level="INFO">Clicking on blog link</msg>
+<arg>Clicking on blog link</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:37.108335" elapsed="0.000144"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:37.108145" elapsed="0.000393"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:37.107862" elapsed="0.000708"/>
+</kw>
+<kw name="Then a tracking event should be sent (e.g., via dataLayer or analytics API)" owner="HeaderKeywords">
+<kw name="Verify analytics event triggered" owner="HeaderFunctions">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-12T22:38:37.109638" level="INFO">Verifying analytics event triggered</msg>
+<arg>Verifying analytics event triggered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-12T22:38:37.109570" elapsed="0.000100"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:37.109415" elapsed="0.000296"/>
+</kw>
+<status status="PASS" start="2025-11-12T22:38:37.109044" elapsed="0.000694"/>
+</kw>
+<tag>analytics</tag>
+<status status="PASS" start="2025-11-12T22:38:36.770904" elapsed="0.339185"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-12T22:38:37.111650" elapsed="2.140388"/>
+</kw>
+<doc>Feature: Website Header Validation
+Tests for validating website header components and behaviors</doc>
+<status status="FAIL" start="2025-11-12T22:38:21.468915" elapsed="17.783227"/>
+</suite>
+<status status="FAIL" start="2025-11-12T22:38:21.447107" elapsed="17.806781"/>
+</suite>
+<statistics>
+<total>
+<stat pass="26" fail="12" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="1" skip="0">accessibility</stat>
+<stat pass="1" fail="0" skip="0">analytics</stat>
+<stat pass="4" fail="0" skip="0">contact-button</stat>
+<stat pass="0" fail="1" skip="0">cross-browser</stat>
+<stat pass="1" fail="0" skip="0">Current</stat>
+<stat pass="1" fail="0" skip="0">dark-mode</stat>
+<stat pass="1" fail="0" skip="0">error-resilience</stat>
+<stat pass="1" fail="0" skip="0">focus-states</stat>
+<stat pass="1" fail="0" skip="0">hover-states</stat>
+<stat pass="0" fail="1" skip="0">internationalization</stat>
+<stat pass="1" fail="0" skip="0">keyboard-navigation</stat>
+<stat pass="2" fail="1" skip="0">logo</stat>
+<stat pass="1" fail="5" skip="0">mobile</stat>
+<stat pass="4" fail="0" skip="0">navigation</stat>
+<stat pass="1" fail="0" skip="0">performance</stat>
+<stat pass="1" fail="0" skip="0">print</stat>
+<stat pass="1" fail="0" skip="0">scrolling</stat>
+<stat pass="1" fail="0" skip="0">security</stat>
+<stat pass="0" fail="1" skip="0">seo</stat>
+<stat pass="0" fail="1" skip="0">touch</stat>
+<stat pass="2" fail="0" skip="0">visibility</stat>
+<stat pass="1" fail="1" skip="0">visual</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="26" fail="12" skip="0">Tests</stat>
+<stat name="Header" id="s1-s1" pass="26" fail="12" skip="0">Tests.Header</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-11-12T22:38:29.071139" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2025-11-12T22:38:29.488145" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2025-11-12T22:38:29.854429" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+</errors>
+</robot>
