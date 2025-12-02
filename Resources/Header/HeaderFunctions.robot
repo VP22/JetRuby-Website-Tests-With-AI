@@ -100,8 +100,66 @@ Click on mobile menu toggle
 Verify mobile menu visibility
     Wait Until Element Is Visible    ${MOBILE_MENU}
 
+Verify mobile menu items
+    # Wait for the last menu item to be visible to ensure menu is fully expanded
+    Wait Until Element Is Visible    ${NAVIGATION_THE_LAST_ITEM}    timeout=20
+    
+    # Take screenshot for debugging to verify all elements are visible
+    # Capture Page Screenshot    mobile_menu_debug.png
+    
+    # Cycle through all navigation items
+    @{actual_items}=    Create List
+    FOR    ${item}    IN    @{NAVIGATION_ITEMS}
+        # Check for mobile menu close button and click if visible
+        ${menu_humburger_visible}=    Run Keyword And Return Status    Element Should Be Visible    ${MOBILE_MENU_TOGGLE}    timeout=1
+        Run Keyword If    ${menu_humburger_visible}    Click Element    ${MOBILE_MENU_TOGGLE}
+        Run Keyword If    ${menu_humburger_visible}    Wait Until Element Is Visible    ${MOBILE_MENU}    timeout=5
+        
+        # Get the appropriate selector based on the item
+        ${selector}=    Set Variable If
+        ...    '${item}' == 'Technologies'    ${NAVIGATION_MENU_Technologies}
+        ...    '${item}' == 'Services'    ${NAVIGATION_MENU_Services}
+        ...    '${item}' == 'Solutions'    ${NAVIGATION_MENU_Solutions}
+        ...    '${item}' == 'Industries'    ${NAVIGATION_MENU_Industries}
+        ...    '${item}' == 'Portfolio'    ${NAVIGATION_MENU_Portfolio}
+        ...    '${item}' == 'Blog'    ${NAVIGATION_MENU_Blog}
+        ...    '${item}' == 'News'    ${NAVIGATION_MENU_News}
+        ...    '${item}' == 'Company'    ${NAVIGATION_MENU_Company}
+        ...    ${None}
+        
+        # Wait for element to be visible
+        Wait Until Element Is Visible    ${selector}    timeout=5
+        
+        # Get text from the element
+        ${text}=    Get Text    ${selector}
+        Append To List    ${actual_items}    ${text}
+    END
+    
+    # Final verification
+    ${count}=    Get Length    ${actual_items}
+    Should Be Equal As Numbers    ${count}    8    Mobile menu should contain all 8 navigation items
+    Lists Should Be Equal    ${actual_items}    ${NAVIGATION_ITEMS}    Mobile menu items should match expected navigation items
+
 Verify mobile menu items count
-    @{mobile_links}=    Get Webelements    ${MOBILE_MENU} a
+    Wait Until Element Is Visible    ${MOBILE_MENU}    timeout=5
+    # Wait for the last menu item to be visible to ensure menu is fully expanded
+    ${last_item_selector}=    Set Variable    css=.header-menu__container > li.header-menu__item:last-child > a.header-link
+    Wait Until Element Is Visible    ${last_item_selector}    timeout=10
+    @{mobile_links}=    Get Webelements    ${MOBILE_MENU_ITEMS_SELECTOR}
+    ${count}=    Get Length    ${mobile_links}
+    Should Be Equal As Numbers    ${count}    8    Mobile menu should contain all 8 navigation items
+
+Elements Should Be Visible
+    [Arguments]    ${selector}
+    @{elements}=    Get Webelements    ${selector}
+    ${count}=    Get Length    ${elements}
+    Should Be Equal As Numbers    ${count}    8    Expected 8 elements but found ${count}
+    FOR    ${element}    IN    @{elements}
+        Element Should Be Visible    ${element}
+    END
+
+Mobile Menu Should Contain All Items
+    @{mobile_links}=    Get Webelements    ${MOBILE_MENU_ITEMS_SELECTOR}
     ${count}=    Get Length    ${mobile_links}
     Should Be Equal As Numbers    ${count}    8    Mobile menu should contain all 8 navigation items
 
@@ -109,7 +167,7 @@ Click on services link in mobile menu
     Click Element    ${SERVICES_LINK_MOBILE}
 
 Verify mobile menu closed
-    Wait Until Element Is Not Visible    ${MOBILE_MENU}
+    Wait Until Element Not Visible    ${MOBILE_MENU}
 
 Validate header landmark role
     ${is_header}=    Run Keyword And Return Status    Element Should Be Visible    tag:header
@@ -128,7 +186,11 @@ Verify mobile toggle initial state
     Should Be Equal    ${expanded}    false    Mobile menu toggle should have aria-expanded="false" initially
 
 Open mobile navigation menu
-    Click Element    ${MOBILE_MENU_TOGGLE}
+    # Check if the close button is visible - if it is, the menu is already open
+    ${close_button_visible}=    Run Keyword And Return Status    Element Should Be Visible    ${MOBILE_MENU_TOGGLE_CLOSE}    timeout=2
+    IF    not ${close_button_visible}
+        Click Element    ${MOBILE_MENU_TOGGLE}
+    END
     Wait Until Element Is Visible    ${MOBILE_MENU}
 
 Verify mobile toggle expanded state

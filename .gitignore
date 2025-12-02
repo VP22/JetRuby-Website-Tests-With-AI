@@ -1,0 +1,14 @@
+# IDE files
+.vscode/
+*.swp
+*.swo
+
+# Results folder
+Results/
+
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log

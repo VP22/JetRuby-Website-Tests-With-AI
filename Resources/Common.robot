@@ -38,7 +38,9 @@ the mobile menu is open
     Wait Until Element Is Visible     ${MOBILE_MENU}
 
 I open the mobile menu
-    Click Element     ${MOBILE_MENU_TOGGLE}
+     ${menu_humburger_visible}=    Run Keyword And Return Status    Element Should Be Visible    ${MOBILE_MENU_TOGGLE}    timeout=1
+    Run Keyword If    ${menu_humburger_visible}    Click Element    ${MOBILE_MENU_TOGGLE}
+    # Click Element     ${MOBILE_MENU_TOGGLE}
     Wait Until Element Is Visible     ${MOBILE_MENU}
 
 the viewport is set to desktop-sized

@@ -74,7 +74,7 @@ the mobile navigation menu should be visible
     Verify mobile menu visibility
 
 the mobile menu should contain all 8 navigation items
-    Verify mobile menu items count
+    Verify mobile menu items
 
 I click the "Services" link in mobile menu
     Click on services link in mobile menu
@@ -90,9 +90,6 @@ the main <nav> element should have an aria-label or aria-labelledby
 
 the mobile menu toggle should have aria-expanded="false" initially
     Verify mobile toggle initial state
-
-I open the mobile menu
-    Open mobile navigation menu
 
 the mobile menu toggle should have aria-expanded="true"
     Verify mobile toggle expanded state

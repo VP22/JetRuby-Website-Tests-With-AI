@@ -65,7 +65,8 @@ Mobile Menu Toggle Is Hidden On Desktop
     Then the mobile menu toggle should not be visible
 
 Each Navigation Link Has A Valid Href
-    [Tags]    navigation    
+    [Tags]    navigation    Review
+    [Documentation]    Verify that each navigation link contains a non-empty href attribute. Links are checked twice!
     Given I am on the homepage
     When the navigation links are examined
     Then every navigation link should have a non-empty href attribute
@@ -77,7 +78,7 @@ Navigation Links Are Keyboard-focusable
     Then I should be able to focus each navigation link in order
 
 Contact Button Is Present In The Header
-    [Tags]    contact-button    Current
+    [Tags]    contact-button    
     Given I am on the homepage
     When the header is checked for contact button
     Then the "Contact" button should be present
@@ -101,32 +102,32 @@ Contact Button Has Appropriate ARIA Label Or Role
     Then the "Contact" button should have a valid role or aria-label
 
 Mobile Menu Toggle Is Visible On Mobile Viewport
-    [Tags]    mobile
-    Given the viewport width is set to ${MOBILE_WIDTH}
+    [Tags]    mobile    
+    Given the viewport width is  ${MOBILE_WIDTH}
     When the header is checked for mobile menu
     Then the mobile menu toggle should be visible
 
 Mobile Menu Is Hidden By Default On Mobile
-    [Tags]    mobile
-    Given the viewport width is set to ${MOBILE_WIDTH}
+    [Tags]    mobile  
+    Given the viewport width is  ${MOBILE_WIDTH}
     When the page is loaded
     Then the mobile navigation menu should be hidden
 
 Clicking Mobile Toggle Opens The Menu
     [Tags]    mobile
-    Given the viewport width is set to ${MOBILE_WIDTH}
+    Given the viewport width is  ${MOBILE_WIDTH}
     When I click the mobile menu toggle
     Then the mobile navigation menu should be visible
 
 Mobile Menu Contains All Navigation Items
-    [Tags]    mobile
-    Given the viewport width is set to ${MOBILE_WIDTH}
+    [Tags]    mobile    Current
+    Given the viewport width is  ${MOBILE_WIDTH}
     When I open the mobile menu
     Then the mobile menu should contain all 8 navigation items
 
 Clicking A Link In Mobile Menu Closes The Menu
     [Tags]    mobile
-    Given the viewport width is set to ${MOBILE_WIDTH}
+    Given the viewport width is  ${MOBILE_WIDTH}
     And the mobile menu is open
     When I click the "Services" link in mobile menu
     Then the mobile menu should close
