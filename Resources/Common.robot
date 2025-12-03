@@ -34,9 +34,6 @@ I navigate to "${page_name}" page
 Open Mobile Menu
     Click Element    ${MOBILE_MENU_TOGGLE}
 
-the mobile menu is open
-    Wait Until Element Is Visible     ${MOBILE_MENU}
-
 I open the mobile menu
      ${menu_humburger_visible}=    Run Keyword And Return Status    Element Should Be Visible    ${MOBILE_MENU_TOGGLE}    timeout=1
     Run Keyword If    ${menu_humburger_visible}    Click Element    ${MOBILE_MENU_TOGGLE}

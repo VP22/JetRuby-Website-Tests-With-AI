@@ -76,8 +76,11 @@ the mobile navigation menu should be visible
 the mobile menu should contain all 8 navigation items
     Verify mobile menu items
 
-I click the "Services" link in mobile menu
-    Click on services link in mobile menu
+I click the Close button in mobile menu
+    Click on the Close button in mobile menu
+
+the mobile menu is open
+    Ensure mobile menu is open
 
 the mobile menu should close
     Verify mobile menu closed

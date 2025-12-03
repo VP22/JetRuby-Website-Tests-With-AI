@@ -120,16 +120,16 @@ Clicking Mobile Toggle Opens The Menu
     Then the mobile navigation menu should be visible
 
 Mobile Menu Contains All Navigation Items
-    [Tags]    mobile    Current
+    [Tags]    mobile    
     Given the viewport width is  ${MOBILE_WIDTH}
     When I open the mobile menu
     Then the mobile menu should contain all 8 navigation items
 
-Clicking A Link In Mobile Menu Closes The Menu
-    [Tags]    mobile
+Clicking On The Close Button In Mobile Menu Closes The Menu
+    [Tags]    mobile    Current
     Given the viewport width is  ${MOBILE_WIDTH}
     And the mobile menu is open
-    When I click the "Services" link in mobile menu
+    When I click the Close button in mobile menu
     Then the mobile menu should close
 
 Header Has Proper Landmark Role

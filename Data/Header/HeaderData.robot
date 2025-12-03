@@ -10,6 +10,9 @@ ${NAVIGATION_TEXT_LINKS}             css=.header-menu__container > li.header-men
 ${NAVIGATION_THE_LAST_ITEM}          css:li.header-menu__company
 ${SERVICES_LINK_MOBILE}              css:.header-menu__item:nth-child(2) > a
 ${MOBILE_MENU_ITEMS_SELECTOR}        css=.header-nav > .header-menu__wrapper > .header-menu__container > li.header-menu__item
+${MOBILE_MENU}                       css=.header-menu__wrapper
+${MOBILE_MENU_TOGGLE}                css=.elementor-section--handles-inside .header-burger-icon:not(.opened)
+${MOBILE_MENU_TOGGLE_CLOSE}          css=.elementor-section--handles-inside .header-burger-icon.opened
 ${NAVIGATION_MENU_Technologies}      css:.elementor-section--handles-inside .header-menu__item:nth-child(1) > a
 ${NAVIGATION_MENU_Services}          css:.elementor-section--handles-inside .header-menu__item:nth-child(2) > a
 ${NAVIGATION_MENU_Solutions}         css:.elementor-section--handles-inside .header-menu__item:nth-child(3) > a

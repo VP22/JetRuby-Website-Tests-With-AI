@@ -104,9 +104,6 @@ Verify mobile menu items
     # Wait for the last menu item to be visible to ensure menu is fully expanded
     Wait Until Element Is Visible    ${NAVIGATION_THE_LAST_ITEM}    timeout=20
     
-    # Take screenshot for debugging to verify all elements are visible
-    # Capture Page Screenshot    mobile_menu_debug.png
-    
     # Cycle through all navigation items
     @{actual_items}=    Create List
     FOR    ${item}    IN    @{NAVIGATION_ITEMS}
@@ -163,11 +160,19 @@ Mobile Menu Should Contain All Items
     ${count}=    Get Length    ${mobile_links}
     Should Be Equal As Numbers    ${count}    8    Mobile menu should contain all 8 navigation items
 
-Click on services link in mobile menu
-    Click Element    ${SERVICES_LINK_MOBILE}
+Click on the Close button in mobile menu
+    Click Element    ${MOBILE_MENU_TOGGLE_CLOSE}
+
+Ensure mobile menu is open
+     # Check if the mobile menu close button is visible
+    ${close_button_visible}=    Run Keyword And Return Status    Element Should Be Visible    ${MOBILE_MENU_TOGGLE_CLOSE}    timeout=5
+    # If close button is not visible, but menu might still be open, click the toggle button
+    Run Keyword If    not ${close_button_visible}    Click Element    ${MOBILE_MENU_TOGGLE}
+    # Wait until the mobile menu is not visible
+    Wait Until Element Is Visible    ${MOBILE_MENU}    timeout=10
 
 Verify mobile menu closed
-    Wait Until Element Not Visible    ${MOBILE_MENU}
+    Wait Until Element IS Not Visible    ${MOBILE_MENU}    timeout=10
 
 Validate header landmark role
     ${is_header}=    Run Keyword And Return Status    Element Should Be Visible    tag:header
