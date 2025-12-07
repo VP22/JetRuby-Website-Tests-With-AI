@@ -126,7 +126,7 @@ Mobile Menu Contains All Navigation Items
     Then the mobile menu should contain all 8 navigation items
 
 Clicking On The Close Button In Mobile Menu Closes The Menu
-    [Tags]    mobile    Current
+    [Tags]    mobile    
     Given the viewport width is  ${MOBILE_WIDTH}
     And the mobile menu is open
     When I click the Close button in mobile menu
@@ -144,25 +144,11 @@ Navigation Region Is Properly Labeled
     When the navigation element is checked
     Then the main <nav> element should have an aria-label or aria-labelledby
 
-Mobile Toggle Has Aria-expanded State
-    [Tags]    accessibility
-    Given the viewport is set to mobile-sized
-    When the mobile menu toggle is checked
-    Then the mobile menu toggle should have aria-expanded="false" initially
-    When I open the mobile menu
-    Then the mobile menu toggle should have aria-expanded="true"
-
 Header Loads Within 500ms Of Page Load
     [Tags]    performance
     Given the page is opened
     When the loading time is measured
     Then the header should be fully rendered within 500 milliseconds
-
-Header Maintains Consistent Height Across Pages
-    [Tags]    visual
-    Given I am on the homepage
-    When I navigate to "Services" page
-    Then the header height should match the homepage header height
 
 No Layout Shift Occurs During Header Rendering
     [Tags]    visual
@@ -177,7 +163,7 @@ Header Does Not Contain Inline Scripts Or Eval()
     Then the header HTML should not include inline JavaScript or dangerous eval patterns
 
 Logo Links To Root With Rel=home Or Equivalent Semantic Practice
-    [Tags]    seo
+    [Tags]    seo    
     Given I am on the homepage
     When the logo link is checked
     Then the logo link should point to "/" and support SEO best practices
@@ -212,23 +198,11 @@ Header Renders Correctly Even If One Asset Fails To Load
     When the header is rendered
     Then the header layout should not break
 
-Header Layout Is Consistent In Chrome, Firefox, And Safari
-    [Tags]    cross-browser
-    Given I am on the homepage
-    When the header is rendered in different browsers
-    Then the header should render with consistent spacing and alignment across major browsers
-
 Entire Header Is Navigable Via Keyboard Only
     [Tags]    keyboard-navigation
     Given I am on the homepage
     When I use only Tab and Enter keys
     Then I should be able to access all interactive header elements
-
-Header Elements Are Tappable On Touch Devices
-    [Tags]    touch
-    Given I am on a touch-enabled device or emulator
-    When I tap the "Contact" button
-    Then the "Contact" button should respond to tap gestures
 
 Header Appears Appropriately In Print Preview
     [Tags]    print

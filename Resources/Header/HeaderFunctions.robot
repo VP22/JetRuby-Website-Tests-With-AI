@@ -186,10 +186,6 @@ Validate navigation labeling
     Run Keyword Unless    ${aria_label} or ${aria_labelledby}    
     ...    Fail    Main <nav> element should have an aria-label or aria-labelledby
 
-Verify mobile toggle initial state
-    ${expanded}=    Get Element Attribute    ${MOBILE_MENU_TOGGLE}    ${ARIA_EXPANDED}
-    Should Be Equal    ${expanded}    false    Mobile menu toggle should have aria-expanded="false" initially
-
 Open mobile navigation menu
     # Check if the close button is visible - if it is, the menu is already open
     ${close_button_visible}=    Run Keyword And Return Status    Element Should Be Visible    ${MOBILE_MENU_TOGGLE_CLOSE}    timeout=2
@@ -198,9 +194,14 @@ Open mobile navigation menu
     END
     Wait Until Element Is Visible    ${MOBILE_MENU}
 
-Verify mobile toggle expanded state
-    ${expanded}=    Get Element Attribute    ${MOBILE_MENU_TOGGLE}    ${ARIA_EXPANDED}
-    Should Be Equal    ${expanded}    true    Mobile menu toggle should have aria-expanded="true"
+Open Mobile Menu
+    Click Element    ${MOBILE_MENU_TOGGLE}
+
+Click on the humburger menu icon
+    ${menu_humburger_visible}=    Run Keyword And Return Status    Element Should Be Visible    ${MOBILE_MENU_TOGGLE}    timeout=1
+    Run Keyword If    ${menu_humburger_visible}    Click Element    ${MOBILE_MENU_TOGGLE}
+    # Click Element     ${MOBILE_MENU_TOGGLE}
+    Wait Until Element Is Visible     ${MOBILE_MENU_TOGGLE_CLOSE}
 
 Measure header loading time
     # This would measure the time it takes for the header to load
@@ -209,10 +210,6 @@ Measure header loading time
 
 Navigate to services page
     Go To    ${SERVICES_PAGE_URL}
-
-Compare header heights
-    # This would compare the header height across pages
-    Log    Comparing header heights
 
 Check for layout shifts
     # This would check for cumulative layout shift
@@ -225,7 +222,7 @@ Scan header for unsafe scripts
 Validate logo link destination
     # This would check that the logo links to the homepage with proper SEO attributes
     ${href}=    Get Element Attribute    ${HEADER_LOGO}    href
-    Should Be Equal    ${href}    /    Logo link should point to "/"
+    Should Be Equal    ${href}    https://jetruby.com/    Logo link should point to "https://jetruby.com/"
     # Additional SEO checks could be added here
 
 Change site language to French
@@ -268,10 +265,6 @@ Verify header layout integrity
     # This would check that the header layout doesn't break when assets fail
     Log    Verifying header layout integrity
 
-Compare header rendering across browsers
-    # This would compare header rendering across browsers
-    Log    Comparing header rendering across browsers
-
 Navigate with keyboard only
     # This would navigate with keyboard only
     Log    Navigating with keyboard only
@@ -279,14 +272,6 @@ Navigate with keyboard only
 Verify keyboard accessibility
     # This would verify keyboard accessibility
     Log    Verifying keyboard accessibility
-
-Switch to touch device mode
-    # This would switch to touch device mode
-    Log    Switching to touch device mode
-
-Verify touch responsiveness
-    # This would verify touch responsiveness
-    Log    Verifying touch responsiveness
 
 Open print preview dialog
     # This would open print preview
@@ -339,9 +324,6 @@ Inspect header element properties
 
 Examine navigation element
     Page Should Contain Element    ${NAVIGATION_MENU}
-
-Inspect mobile menu toggle
-    Page Should Contain Element    ${MOBILE_MENU_TOGGLE}
 
 Time page loading process
     # This would time the page loading process

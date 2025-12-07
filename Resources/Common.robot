@@ -31,15 +31,6 @@ I navigate to "${page_name}" page
     ...    ELSE
     ...    Fail    Page '${page_name}' is not defined
 
-Open Mobile Menu
-    Click Element    ${MOBILE_MENU_TOGGLE}
-
-I open the mobile menu
-     ${menu_humburger_visible}=    Run Keyword And Return Status    Element Should Be Visible    ${MOBILE_MENU_TOGGLE}    timeout=1
-    Run Keyword If    ${menu_humburger_visible}    Click Element    ${MOBILE_MENU_TOGGLE}
-    # Click Element     ${MOBILE_MENU_TOGGLE}
-    Wait Until Element Is Visible     ${MOBILE_MENU}
-
 the viewport is set to desktop-sized
     Set Window Size    ${DESKTOP_WIDTH}    800
 

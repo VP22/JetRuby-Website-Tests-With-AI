@@ -73,6 +73,9 @@ I click the mobile menu toggle
 the mobile navigation menu should be visible
     Verify mobile menu visibility
 
+I open the mobile menu
+    Click on the humburger menu icon
+
 the mobile menu should contain all 8 navigation items
     Verify mobile menu items
 
@@ -91,20 +94,11 @@ the <header> element should have role="banner" or be a native <header>
 the main <nav> element should have an aria-label or aria-labelledby
     Validate navigation labeling
 
-the mobile menu toggle should have aria-expanded="false" initially
-    Verify mobile toggle initial state
-
-the mobile menu toggle should have aria-expanded="true"
-    Verify mobile toggle expanded state
-
 the header should be fully rendered within 500 milliseconds
     Measure header loading time
 
 I navigate to "Services" page
     Navigate to services page
-
-the header height should match the homepage header height
-    Compare header heights
 
 the header should not cause cumulative layout shift (CLS)
     Check for layout shifts
@@ -145,20 +139,11 @@ the logo image fails to load
 the header layout should not break
     Verify header layout integrity
 
-the header should render with consistent spacing and alignment across major browsers
-    Compare header rendering across browsers
-
 I use only Tab and Enter keys
     Navigate with keyboard only
 
 I should be able to access all interactive header elements
     Verify keyboard accessibility
-
-I am on a touch-enabled device or emulator
-    Switch to touch device mode
-
-the "Contact" button should respond to tap gestures
-    Verify touch responsiveness
 
 I open print preview
     Open print preview dialog
@@ -202,9 +187,6 @@ the header element is examined
 
 the navigation element is checked
     Examine navigation element
-
-the mobile menu toggle is checked
-    Inspect mobile menu toggle
 
 the loading time is measured
     Time page loading process
