@@ -169,7 +169,7 @@ Logo Links To Root With Rel=home Or Equivalent Semantic Practice
     Then the logo link should point to "/" and support SEO best practices
 
 Header Text Supports UTF-8 Characters
-    [Tags]    internationalization
+    [Tags]    internationalization    Current
     Given the site language is set to French
     When the navigation items are displayed
     Then navigation items should display correctly with accented characters

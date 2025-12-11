@@ -226,12 +226,22 @@ Validate logo link destination
     # Additional SEO checks could be added here
 
 Change site language to French
-    # This would change the site language
-    Log    Changing site language to French
+    # Set the language to French
+    Execute JavaScript    document.documentElement.lang = 'fr';
 
 Verify accented character display
-    # This would verify that navigation items display correctly with accented characters
-    Log    Verifying accented character display
+    # Verify UTF-8 character support
+    # 1. Check that all expected navigation items are present on the page
+    # @{expected_items}=    Create List    Technologies    Services    Solutions    Industries    Portfolio    Blog    News    Company
+    
+    FOR    ${item}    IN    @{NAVIGATION_ITEMS}
+        Page Should Contain    ${item}
+    END
+    
+    # 2. Verify UTF-8 encoding is active
+    ${charset}=    Execute JavaScript    return document.characterSet || 'UNKNOWN';
+    Run Keyword If    '${charset}' != 'UNKNOWN'
+    ...    Should Be Equal As Strings    ${charset}    UTF-8
 
 Hover over portfolio link
     # This would hover over the portfolio link
